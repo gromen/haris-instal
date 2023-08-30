@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -7,10 +7,14 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors:{
-      "primary": "#e93a14",
-      "secondary": "#2c2c33",
-      "navy-100": "#00055e",
+    colors: {
+      primary: '#e93a14',
+      white: '#ffffff',
+      secondary: '#2c2c33',
+      navy: {
+        100: '#01057d',
+        800: '#00055e',
+      },
     },
     extend: {
       backgroundImage: {
@@ -21,5 +25,5 @@ const config: Config = {
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
