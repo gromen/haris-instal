@@ -15,6 +15,11 @@ const config: Config = {
         100: '#01057d',
         800: '#00055e',
       },
+      gray: {
+        400: '#f6f7f6',
+        500: '#e5e3e3',
+        700: '#909191',
+      },
     },
     extend: {
       backgroundImage: {
