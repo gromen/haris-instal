@@ -14,11 +14,13 @@ export default function Header() {
     <header className="header">
       <div className="container mx-auto">
         <div className="header__top flex text-white">
-          <div className="header__welcome bg-secondary p-6 md:basis-1/5">
-            <div>Witamy na stronie haris-instal 😼</div>
+          <div className="relative bg-secondary p-6 md:basis-3/12 after:block after:absolute after:-skew-x-30 after:skew-y-0 after:left-0 after:h-full after:top-0 after:origin-bottom-right after:w-full after:bg-secondary">
+            <div className="z-10 relative">
+              Witamy na stronie haris-instal 😼
+            </div>
           </div>
 
-          <div className="header__socialMedia p-2 md:p-6 bg-primary grow  md:basis-3/5 flex items-center justify-end">
+          <div className="header__socialMedia p-2 md:p-6 bg-primary grow flex items-center justify-end">
             <Link href="/">
               <FontAwesomeIcon
                 icon={faWhatsapp}
@@ -35,15 +37,9 @@ export default function Header() {
           </div>
         </div>
         <div className="flex">
-          <div className="hidden md:block basis-1/5">
-            <Link href="/">
-              <Image
-                src={logo}
-                alt="main logo image"
-                width={200}
-                height={60}
-                layout="responsive"
-              />
+          <div className="hidden md:flex justify-center basis-2/12">
+            <Link className="flex" href="/">
+              <Image src={logo} alt="main logo image" width={200} height={60} />
             </Link>
           </div>
           <div className="bg-white flex flex-col grow divide-y divide-gray-500">

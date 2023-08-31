@@ -16,6 +16,7 @@ const config: Config = {
         800: '#00055e',
       },
       gray: {
+        300: '#eff5fb',
         400: '#f6f7f6',
         500: '#e5e3e3',
         700: '#909191',
@@ -26,6 +27,9 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      skew: {
+        30: '30deg',
       },
     },
   },
