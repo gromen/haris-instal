@@ -6,16 +6,13 @@ import Header from '@/app/components/Header/Header';
 import HeroBanner from '@/app/components/HeroBanner/HeroBanner';
 import TrustedPartner from '@/app/components/TrustedPartner/TrustedPartner';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 export default function Home() {
   config.autoAddCss = false;
 
   return (
     <Fragment>
       <Header />
-      <main className={''}>
+      <main>
         <HeroBanner />
         <TrustedPartner />
       </main>
