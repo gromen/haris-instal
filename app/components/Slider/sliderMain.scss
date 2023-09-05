@@ -1,0 +1,14 @@
+.slider-main {
+  .slick-arrow {
+    z-index: 1;
+    left: 100px;
+  }
+
+  .slick-next {
+    top: 40%;
+  }
+
+  .slick-prev {
+    top: calc(40% + 25px);
+  }
+}

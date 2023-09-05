@@ -1,7 +1,12 @@
 import { Fragment } from 'react';
-import Header from '@/app/components/Header/Header';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
+
+import Header from '@/app/components/Header/Header';
+import HeroBanner from '@/app/components/HeroBanner/HeroBanner';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function Home() {
   config.autoAddCss = false;
@@ -9,7 +14,9 @@ export default function Home() {
   return (
     <Fragment>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+      <main className={''}>
+        <HeroBanner />
+      </main>
     </Fragment>
   );
 }
