@@ -1,21 +1,19 @@
 'use client';
 
-import Image from 'next/image';
 import Slider from 'react-slick';
 
 import './sliderMain.scss';
 import styled from 'styled-components';
 
-import slide1 from '@/public/slides/slide-1.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-const StyledSlide = styled.div<{ imgUrl: string }>`
-  background: url(${({ imgUrl }) => imgUrl}) no-repeat;
-  background-size: contain;
+const StyledSlide = styled.div<{ $imgUrl: string }>`
+  background: url(${({ $imgUrl }) => $imgUrl}) no-repeat;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -31,7 +29,7 @@ type ArrowProps = {
 
 export default function SliderMain() {
   const settings = {
-    dots: true,
+    dots: false,
     fade: true,
     infinite: false,
     speed: 500,
@@ -75,7 +73,7 @@ export default function SliderMain() {
 
   return (
     <Slider {...settings} className="slider-main">
-      <StyledSlide imgUrl={'/slides/slide-1.jpg'}>
+      <StyledSlide $imgUrl={'/slides/slide-1.jpg'}>
         <div>
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
@@ -100,15 +98,81 @@ export default function SliderMain() {
           </div>
         </div>
       </StyledSlide>
-      <div>
-        <Image src={slide1} alt="slide 2" />
-      </div>
-      <div>
-        <Image src={slide1} alt="slide 3" />
-      </div>
-      <div>
-        <Image src={slide1} alt="slide 4" />
-      </div>
+      <StyledSlide $imgUrl={'/slides/slide-2.jpg'}>
+        <div>
+          <h2>We provide Effective Plumbing Solution</h2>
+          <small>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+            consectetur debitis deleniti dolores error est facere fuga incidunt,
+            laboriosam magnam necessitatibus, officia optio perferendis quia
+            quisquam reiciendis reprehenderit similique voluptas.
+          </small>
+          <div className="flex">
+            <button
+              type="button"
+              className="bg-primary text-white  py-2 px-4 mr-5"
+            >
+              Discover more
+            </button>
+            <button
+              type="button"
+              className="bg-transparent text-white border-primary border-2 py-2 px-4"
+            >
+              Nasze Usługi
+            </button>
+          </div>
+        </div>
+      </StyledSlide>
+      <StyledSlide $imgUrl={'/slides/slide-3.jpg'}>
+        <div>
+          <h2>We provide Effective Plumbing Solution</h2>
+          <small>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+            consectetur debitis deleniti dolores error est facere fuga incidunt,
+            laboriosam magnam necessitatibus, officia optio perferendis quia
+            quisquam reiciendis reprehenderit similique voluptas.
+          </small>
+          <div className="flex">
+            <button
+              type="button"
+              className="bg-primary text-white  py-2 px-4 mr-5"
+            >
+              Discover more
+            </button>
+            <button
+              type="button"
+              className="bg-transparent text-white border-primary border-2 py-2 px-4"
+            >
+              Nasze Usługi
+            </button>
+          </div>
+        </div>
+      </StyledSlide>
+      <StyledSlide $imgUrl={'/slides/slide-4.jpg'}>
+        <div>
+          <h2>We provide Effective Plumbing Solution</h2>
+          <small>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+            consectetur debitis deleniti dolores error est facere fuga incidunt,
+            laboriosam magnam necessitatibus, officia optio perferendis quia
+            quisquam reiciendis reprehenderit similique voluptas.
+          </small>
+          <div className="flex">
+            <button
+              type="button"
+              className="bg-primary text-white  py-2 px-4 mr-5"
+            >
+              Discover more
+            </button>
+            <button
+              type="button"
+              className="bg-transparent text-white border-primary border-2 py-2 px-4"
+            >
+              Nasze Usługi
+            </button>
+          </div>
+        </div>
+      </StyledSlide>
     </Slider>
   );
 }
