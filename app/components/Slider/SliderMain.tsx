@@ -1,14 +1,21 @@
 'use client';
-import Image from 'next/image';
+
 import Slider from 'react-slick';
 
-import img from '@/public/slides/slide-5.jpg';
-import img1 from '@/public/slides/slide-2.jpg';
-import img2 from '@/public/slides/slide-3.jpg';
-import img3 from '@/public/slides/slide-4.jpg';
-import img4 from '@/public/slides/slide-1.jpg';
+// import './sliderMain.scss';
+import styled from 'styled-components';
 import { settings } from '@/app/shared/SliderArrows/SliderSettings';
 
+const StyledSlide = styled.div<{ $imgUrl: string }>`
+  background: url(${({ $imgUrl }) => $imgUrl}) no-repeat;
+  background-size: cover;
+  width: 100vh;
+  position: relative;
+`;
+
+type ArrowProps = {
+  onClick?: () => void;
+};
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './slider.scss';
@@ -16,46 +23,11 @@ import './slider.scss';
 export default function SliderMain() {
   return (
     <Slider {...settings} className="slider-main">
-      <div className="relative">
-        <Image
-          className="mx-auto"
-          src={img}
-          alt={'img'}
-          height={400}
-          style={{ objectFit: 'scale-down' }}
-        />
-        <div className="absolute top-0 z-10 h-full w-full bg-secondary bg-opacity-50 p-4 text-white">
-          <h2>We provide Effective Plumbing Solution</h2>
-          <small>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-            consectetur debitis deleniti dolores error est facere fuga incidunt,
-            laboriosam magnam necessitatibus, officia optio perferendis quia
-            quisquam reiciendis reprehenderit similique voluptas.
-          </small>
-          <div className="flex">
-            <button
-              type="button"
-              className="mr-5 bg-primary px-4 py-2 text-white"
-            >
-              Discover more
-            </button>
-            <button
-              type="button"
-              className="border-2 border-primary bg-transparent px-4 py-2 text-white"
-            >
-              Nasze Usługi
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="relative">
-        <Image
-          className="mx-auto"
-          src={img1}
-          alt={'img'}
-          style={{ objectFit: 'cover' }}
-        />
-        <div className="absolute">
+      <StyledSlide
+        $imgUrl={'/slides/slide-1.jpg'}
+        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+      >
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -78,15 +50,12 @@ export default function SliderMain() {
             </button>
           </div>
         </div>
-      </div>
-      <div className="relative">
-        <Image
-          className="mx-auto"
-          src={img2}
-          alt={'img'}
-          style={{ objectFit: 'cover' }}
-        />
-        <div className="absolute">
+      </StyledSlide>
+      <StyledSlide
+        $imgUrl={'/slides/slide-2.jpg'}
+        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+      >
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -109,15 +78,12 @@ export default function SliderMain() {
             </button>
           </div>
         </div>
-      </div>
-      <div className="relative">
-        <Image
-          className="mx-auto"
-          src={img3}
-          alt={'img'}
-          style={{ objectFit: 'cover' }}
-        />
-        <div className="absolute">
+      </StyledSlide>
+      <StyledSlide
+        $imgUrl={'/slides/slide-3.jpg'}
+        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+      >
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -140,15 +106,12 @@ export default function SliderMain() {
             </button>
           </div>
         </div>
-      </div>
-      <div className="relative">
-        <Image
-          className="mx-auto"
-          src={img4}
-          alt={'img'}
-          style={{ objectFit: 'cover' }}
-        />
-        <div className="absolute">
+      </StyledSlide>
+      <StyledSlide
+        $imgUrl={'/slides/slide-4.jpg'}
+        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+      >
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -171,7 +134,35 @@ export default function SliderMain() {
             </button>
           </div>
         </div>
-      </div>
+      </StyledSlide>
+      <StyledSlide
+        $imgUrl={'/slides/slide-3.jpg'}
+        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+      >
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
+          <h2>We provide Effective Plumbing Solution</h2>
+          <small>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+            consectetur debitis deleniti dolores error est facere fuga incidunt,
+            laboriosam magnam necessitatibus, officia optio perferendis quia
+            quisquam reiciendis reprehenderit similique voluptas.
+          </small>
+          <div className="flex">
+            <button
+              type="button"
+              className="mr-5 bg-primary  px-4 py-2 text-white"
+            >
+              Discover more
+            </button>
+            <button
+              type="button"
+              className="border-2 border-primary bg-transparent px-4 py-2 text-white"
+            >
+              Nasze Usługi
+            </button>
+          </div>
+        </div>
+      </StyledSlide>
     </Slider>
   );
 }

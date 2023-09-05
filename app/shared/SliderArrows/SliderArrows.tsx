@@ -13,7 +13,7 @@ export type ArrowProps = {
 export function NextArrow({ onClick }: ArrowProps) {
   return (
     <button
-      className="absolute left-40 top-32 border-2 border-primary p-4 hover:border-navy-800 "
+      className="absolute bottom-10 right-1/3 border-2 border-primary p-4 hover:border-navy-800 "
       type="button"
       onClick={onClick}
     >
@@ -29,7 +29,7 @@ export function NextArrow({ onClick }: ArrowProps) {
 export function PrevArrow({ onClick }: ArrowProps) {
   return (
     <button
-      className="absolute left-40 top-52 z-10 border-2 border-primary p-4 hover:border-navy-800 "
+      className="absolute bottom-10 left-1/3 z-10 border-2 border-primary p-4 hover:border-navy-800 "
       type="button"
       onClick={onClick}
     >

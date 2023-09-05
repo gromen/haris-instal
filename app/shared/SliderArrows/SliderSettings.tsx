@@ -18,7 +18,7 @@ export const settings = {
     {
       breakpoint: 1024,
       settings: {
-        autoplay: true,
+        autoplay: false,
         arrows: false,
         dots: false,
       },

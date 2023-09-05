@@ -1,4 +1,3 @@
-import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 
 import Header from '@/app/components/Header/Header';
@@ -11,6 +10,10 @@ import TotalStatistics from '@/app/components/TotalStatistics/TotalStatistics';
 import Faq from '@/app/components/Faq/Faq';
 import Projects from '@/app/components/Projects/Projects';
 import Footer from '@/app/components/Footer/Footer';
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function Home() {
   config.autoAddCss = false;

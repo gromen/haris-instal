@@ -15,7 +15,7 @@ export default function ContactUs() {
       <Header />
       <HeadingHero title="Kontakt" breadcrumb="Kontakt" />
       <div className="container mx-auto mt-10 p-4 lg:mt-20 lg:flex">
-        <div className="grow bg-gray-500 px-5 py-10 text-center font-semibold">
+        <div className="flex-1 bg-gray-500 px-5 py-10 text-center font-semibold">
           <FontAwesomeIcon
             icon={faMapLocationDot}
             className="text-4xl text-primary"
@@ -23,7 +23,7 @@ export default function ContactUs() {
           <p className="py-3 text-sm text-gray-700">Nasze biuro</p>
           <p className="font-bold">ul. Szkolna 17, Ostrów Mazowiecka</p>
         </div>
-        <div className="grow bg-primary px-5 py-10 text-center font-semibold text-white">
+        <div className="flex-1 bg-primary px-5 py-10 text-center font-semibold text-white">
           <FontAwesomeIcon
             icon={faPhoneVolume}
             className="text-4xl text-white"
@@ -33,7 +33,7 @@ export default function ContactUs() {
             <a href="tel:+48791334999">+48-791-334-999</a>
           </p>
         </div>
-        <div className="grow bg-gray-500 px-5 py-10 text-center font-semibold">
+        <div className="flex-1 bg-gray-500 px-5 py-10 text-center font-semibold">
           <FontAwesomeIcon
             icon={faComments}
             className="text-4xl text-primary"

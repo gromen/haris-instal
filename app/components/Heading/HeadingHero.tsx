@@ -19,10 +19,10 @@ export default function HeadingHero({ title, breadcrumb }: HeadingHeroProps) {
     <StyledHeading className="relative py-5 lg:py-20">
       <div className="absolute inset-0 h-full w-full bg-secondary bg-opacity-50"></div>
       <div className="container relative mx-auto p-4">
-        <h1 className="mb-4 font-semibold text-white lg:mb-8 lg:text-7xl">
+        <h1 className="mb-4 text-2xl font-semibold text-white lg:mb-8 lg:text-7xl">
           {title}
         </h1>
-        <ul className="flex text-xl font-semibold text-primary">
+        <ul className="flex text-xl font-semibold text-primary max-md:text-sm">
           <li className="text-primary">
             <Link href="/">Home</Link>
           </li>

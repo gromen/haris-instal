@@ -36,6 +36,7 @@ const config: Config = {
         500: '#e5e3e3',
         700: '#909191',
       },
+      'black-rgba': 'rgba(0, 0, 0, 0.5)',
     },
     extend: {
       backgroundImage: {
