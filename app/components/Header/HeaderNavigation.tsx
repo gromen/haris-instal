@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/public/Bohus-logo.svg';
+import HeaderNavigationItem from '@/app/components/Header/HeaderNavigation/HeaderNavigationItem';
 
 export default function HeaderNavigation() {
   return (
@@ -25,21 +26,23 @@ export default function HeaderNavigation() {
         </svg>
       </div>
       <ul className="hidden md:flex font-medium text-lg">
-        <li className="pr-6 transition-colors hover:text-primary">
-          <Link href="/" aria-label="Home Page">
-            Home
-          </Link>
-        </li>
-        <li className="pr-6 transition-colors hover:text-primary">
-          <Link href="/o-nas" aria-label="About us page">
-            O nas
-          </Link>
-        </li>
-        <li className="transition-colors hover:text-primary">
-          <Link href="/kontakt" aria-label="Contact page">
-            Kontakt
-          </Link>
-        </li>
+        <HeaderNavigationItem
+          title={'Home'}
+          href={'/'}
+          label="Home page"
+          classes={'pr-6'}
+        />
+        <HeaderNavigationItem
+          title={'O nas'}
+          href={'/o-nas'}
+          label="O nas"
+          classes={'pr-6'}
+        />
+        <HeaderNavigationItem
+          title={'Kontakt'}
+          href={'/kontakt'}
+          label="Kontakt"
+        />
       </ul>
     </nav>
   );

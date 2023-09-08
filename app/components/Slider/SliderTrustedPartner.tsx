@@ -13,33 +13,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import { useState } from 'react';
+import { slides } from '@/app/constants';
 
 type ArrowProps = {
   onClick?: () => void;
 };
-
-const slides = [
-  {
-    id: 'slide-1',
-    url: '/images/logo-trusted-partner-1.svg',
-    alt: 'logo trusted partner',
-  },
-  {
-    id: 'slide-2',
-    url: '/images/logo-trusted-partner-1.svg',
-    alt: 'logo trusted partner',
-  },
-  {
-    id: 'slide-3',
-    url: '/images/logo-trusted-partner-1.svg',
-    alt: 'logo trusted partner',
-  },
-  {
-    id: 'slide-4',
-    url: '/images/logo-trusted-partner-1.svg',
-    alt: 'logo trusted partner',
-  },
-];
 
 export default function SliderTrustedPartner() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
