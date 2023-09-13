@@ -17,7 +17,7 @@ export default function Contact() {
           Having an urgent problem and can&apos;t wait?
         </p>
       </div>
-      <div className="grow items-center gap-3 sm:flex">
+      <div className="grow items-center gap-4 sm:flex">
         <label htmlFor="name" className="inline-block w-full sm:w-auto">
           Twoje imię<sup>*</sup>
           <input
