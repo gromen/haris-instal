@@ -1,9 +1,20 @@
-import { FormEvent } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
+
+const initialState = { name: '', email: '', phone: '' };
 
 export default function Contact() {
+  const [values, setValues] = useState(initialState);
+
   const onSubmit = (event: FormEvent) => {
     event.preventDefault();
-    console.log(event.target);
+    console.log(values);
+  };
+
+  const onChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
+    setValues((prevValues) => ({
+      ...prevValues,
+      [target.name]: target.value,
+    }));
   };
 
   return (
@@ -21,9 +32,13 @@ export default function Contact() {
         <label htmlFor="name" className="inline-block w-full sm:w-auto">
           Twoje imię<sup>*</sup>
           <input
-            className="mt-3 block h-10 w-full md:inline-block"
+            required
+            className="mt-3 block h-10 w-full text-primary md:inline-block"
             type="text"
             id="name"
+            name="name"
+            value={values.name}
+            onChange={onChange}
           />
         </label>
         <label
@@ -32,9 +47,13 @@ export default function Contact() {
         >
           Twój email<sup>*</sup>
           <input
-            className="mt-3 block h-10 w-full sm:inline-block"
-            type="text"
+            required
+            className="mt-3 block h-10 w-full text-primary sm:inline-block"
+            type="email"
             id="email"
+            name="email"
+            value={values.email}
+            onChange={onChange}
           />
         </label>
         <label
@@ -43,9 +62,13 @@ export default function Contact() {
         >
           Telefon<sup>*</sup>
           <input
-            className="mt-3 block h-10 w-full sm:inline-block"
-            type="text"
+            required
+            className="mt-3 block h-10 w-full text-primary sm:inline-block"
+            type="tel"
             id="phone"
+            name="phone"
+            value={values.phone}
+            onChange={onChange}
           />
         </label>
         <button
