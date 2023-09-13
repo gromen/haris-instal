@@ -7,22 +7,32 @@ export default function Contact() {
   };
 
   return (
-    <form onSubmit={onSubmit} className="sm:flex gap-2">
-      <label htmlFor="name " className="inline-block">
-        Twoje imię<sup>*</sup>
-        <input className="mt-3 block md:inline-block" type="text" id="name" />
-      </label>
-      <label htmlFor="email" className="mt-2 sm:mt-0 inline-block">
-        Twój email<sup>*</sup>
-        <input className="mt-3 block sm:inline-block" type="text" id="email" />
-      </label>
-      <label htmlFor="phone" className="mt-2 sm:mt-0 inline-block">
-        Telefon<sup>*</sup>
-        <input className="mt-3 block sm:inline-block" type="text" id="phone" />
-      </label>
+    <form onSubmit={onSubmit} className="justify-between gap-2 sm:flex">
+      <div className="gap-2 sm:flex">
+        <label htmlFor="name" className="inline-block">
+          Twoje imię<sup>*</sup>
+          <input className="mt-3 block md:inline-block" type="text" id="name" />
+        </label>
+        <label htmlFor="email" className="mt-2 inline-block sm:mt-0">
+          Twój email<sup>*</sup>
+          <input
+            className="mt-3 block sm:inline-block"
+            type="text"
+            id="email"
+          />
+        </label>
+        <label htmlFor="phone" className="mt-2 inline-block sm:mt-0">
+          Telefon<sup>*</sup>
+          <input
+            className="mt-3 block sm:inline-block"
+            type="text"
+            id="phone"
+          />
+        </label>
+      </div>
       <button
         type="submit"
-        className="bg-primary text-white hover:bg-navy-100 transition-colors p-4 sm:block w-full mt-8"
+        className="mt-8 bg-primary p-4 text-white transition-colors hover:bg-navy-100 sm:block"
       >
         Wyślij
       </button>
