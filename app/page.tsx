@@ -7,6 +7,7 @@ import HeroBanner from '@/app/components/HeroBanner/HeroBanner';
 import TrustedPartner from '@/app/components/TrustedPartner/TrustedPartner';
 import OurServices from '@/app/components/OurServices/OurServices';
 import UrgentContact from '@/app/components/UrgentContact/UrgentContact';
+import ChooseOurServices from '@/app/components/ChooseOurServices/ChooseOurServices';
 
 export default function Home() {
   config.autoAddCss = false;
@@ -19,6 +20,7 @@ export default function Home() {
         <TrustedPartner />
         <OurServices />
         <UrgentContact />
+        <ChooseOurServices />
       </main>
     </Fragment>
   );

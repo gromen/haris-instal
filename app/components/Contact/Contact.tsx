@@ -21,7 +21,7 @@ export default function Contact() {
     }));
   };
 
-  const disabled = () => !values.email || !values.phone || !values.name;
+  const disabled = !values.email || !values.phone || !values.name;
 
   return (
     <form
@@ -39,7 +39,7 @@ export default function Contact() {
           Twoje imię<sup>*</sup>
           <input
             required
-            className="mt-3 block h-10 w-full text-primary md:inline-block"
+            className="mt-3 block h-10 w-full p-3 text-primary md:inline-block"
             type="text"
             id="name"
             name="name"
@@ -54,7 +54,7 @@ export default function Contact() {
           Twój email<sup>*</sup>
           <input
             required
-            className="mt-3 block h-10 w-full text-primary sm:inline-block"
+            className="mt-3 block h-10 w-full p-3 text-primary sm:inline-block"
             type="email"
             id="email"
             name="email"
@@ -69,7 +69,7 @@ export default function Contact() {
           Telefon<sup>*</sup>
           <input
             required
-            className="mt-3 block h-10 w-full text-primary sm:inline-block"
+            className="mt-3 block h-10 w-full p-3 text-primary sm:inline-block"
             type="tel"
             id="phone"
             name="phone"
@@ -80,7 +80,7 @@ export default function Contact() {
         <button
           type="submit"
           className="mt-8 w-full bg-primary p-4 text-white transition-colors hover:bg-navy-100 sm:block sm:w-auto"
-          disabled={disabled()}
+          disabled={disabled}
         >
           Wyślij
         </button>
