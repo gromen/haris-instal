@@ -39,12 +39,12 @@ export default function TrustedPartner() {
   );
 
   return (
-    <section className="container mx-auto md:flex">
+    <section className="container mx-auto lg:flex">
       <div className="bg-primary p-4 text-white">
         <p>Nasi zaufani partnerzy</p>
         <h3>Marki z którymi współpracujemy i w które wierzymy...</h3>
       </div>
-      <div className="bg-gray-400 md:flex md:flex-row md:justify-around grow p-4">
+      <div className="grow bg-gray-400 p-4 lg:flex lg:flex-row lg:justify-around">
         {images}
       </div>
     </section>
