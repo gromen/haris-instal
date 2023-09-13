@@ -5,8 +5,12 @@ const initialState = { name: '', email: '', phone: '' };
 export default function Contact() {
   const [values, setValues] = useState(initialState);
 
-  const onSubmit = (event: FormEvent) => {
+  const onSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    await fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify(values),
+    });
     console.log(values);
   };
 
@@ -16,6 +20,8 @@ export default function Contact() {
       [target.name]: target.value,
     }));
   };
+
+  const disabled = () => !values.email || !values.phone || !values.name;
 
   return (
     <form
@@ -74,6 +80,7 @@ export default function Contact() {
         <button
           type="submit"
           className="mt-8 w-full bg-primary p-4 text-white transition-colors hover:bg-navy-100 sm:block sm:w-auto"
+          disabled={disabled()}
         >
           Wyślij
         </button>
