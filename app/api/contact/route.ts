@@ -6,7 +6,8 @@ export async function POST(request: Request) {
   await sendMail(
     `Prośba o kontakt - ${name}`,
     'gromson101@gmail.com',
-    `Prośba o kontakt na nr tel: ${phone} lub adres email: ${email}`
+    `Prośba o kontakt na nr tel: ${phone} lub adres email: ${email}`,
+    email
   );
   console.log({ name, phone, email });
 
