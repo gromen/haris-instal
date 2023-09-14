@@ -10,8 +10,5 @@ export async function POST(request: Request) {
   );
   console.log({ name, phone, email });
 
-  return new Response(null, {
-    status: 200,
-    statusText: 'Twój email został wysłany 📩',
-  });
+  return new Response('Email został wysłany');
 }
