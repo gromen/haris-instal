@@ -9,6 +9,7 @@ import OurServices from '@/app/components/OurServices/OurServices';
 import UrgentContact from '@/app/components/UrgentContact/UrgentContact';
 import ChooseOurServices from '@/app/components/ChooseOurServices/ChooseOurServices';
 import TotalStatistics from '@/app/components/TotalStatistics/TotalStatistics';
+import Faq from '@/app/components/Faq/Faq';
 
 export default function Home() {
   config.autoAddCss = false;
@@ -23,6 +24,7 @@ export default function Home() {
         <UrgentContact />
         <ChooseOurServices />
         <TotalStatistics />
+        <Faq />
       </main>
     </Fragment>
   );

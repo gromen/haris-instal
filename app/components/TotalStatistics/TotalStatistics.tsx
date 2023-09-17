@@ -15,7 +15,7 @@ export default function TotalStatistics() {
             <p className="text-4xl text-primary">250+</p>
             <span className="text-gray-700">Successfull Projects</span>
           </div>
-          <div className="flex-1 border-r-0 border-b-gray-500 border-r-gray-500 py-8 font-semibold lg:border-b-0 lg:border-r lg:pl-16">
+          <div className="flex-1 border-r-0 border-b-gray-500 py-8 font-semibold lg:border-b-0  lg:pl-16">
             <p className="text-4xl text-primary">100%</p>
             <span className="text-gray-700">Successfull Projects</span>
           </div>
