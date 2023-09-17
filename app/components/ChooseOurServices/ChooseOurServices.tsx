@@ -1,5 +1,7 @@
 import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import image from '@/public/images/image1.jpg';
+import Image from 'next/image';
 
 export default function ChooseOurServices() {
   return (
@@ -32,7 +34,9 @@ export default function ChooseOurServices() {
             </article>
           </div>
         </div>
-        <div className="lg:w-2/3">images</div>
+        <div className="lg:w-2/3">
+          <Image src={image} alt="bg" width={640} height={400} />
+        </div>
       </div>
     </section>
   );
