@@ -31,6 +31,7 @@ export default function AccordionListItem({
   ]);
 
   const accessibleId = `accordionItem-${accordionItemIndex}`;
+  const tabIndexContent = isOpen ? 0 : undefined;
 
   return (
     <li className={classesLi} onClick={() => onClick(itemId)}>
@@ -53,7 +54,11 @@ export default function AccordionListItem({
       >
         {title}
       </button>
-      <p id={accessibleId} className={classesContent}>
+      <p
+        id={accessibleId}
+        className={classesContent}
+        tabIndex={tabIndexContent}
+      >
         {content}
       </p>
     </li>
