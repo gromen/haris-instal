@@ -1,8 +1,7 @@
 import { Metadata } from 'next';
-import './../globals.css';
 
 export const metadata: Metadata = {
-  title: 'Projekt| Haris Install',
+  title: 'Projekt | Haris Install',
   description: 'Opis projektu',
 };
 
@@ -11,5 +10,5 @@ export default function ProjectLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}</main>;
+  return <main className="container mx-auto p-4">tralala {children}</main>;
 }

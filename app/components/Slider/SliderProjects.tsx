@@ -47,7 +47,7 @@ export default function SliderProjects() {
       return currentSlide === 0;
     }
 
-    return currentSlide === slidesProjects.length - 1;
+    return currentSlide === slidesProjects.length - 1 && !settings.infinite;
   };
 
   function NextArrow({ onClick }: ArrowProps) {
@@ -90,7 +90,7 @@ export default function SliderProjects() {
         <Link
           href={slide.url}
           key={slide.title}
-          className="group relative before:absolute before:h-full before:w-full before:bg-gradient-to-b before:from-transparent before:to-secondary before:transition-opacity lg:px-2 lg:before:opacity-0 lg:hover:before:opacity-100"
+          className="before:transition-opacity group relative before:absolute before:h-full before:w-full before:bg-gradient-to-b before:from-transparent before:to-secondary lg:px-2 lg:before:w-[calc(100%-15px)] lg:before:opacity-0 lg:hover:before:opacity-100"
         >
           <Image src={image} alt={'as'} loading="lazy" />
           <div className="absolute bottom-0 pb-5 pl-5 lg:invisible lg:group-hover:visible">

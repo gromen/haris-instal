@@ -35,24 +35,24 @@ export default function AccordionListItem({
   const arrowIcon = isOpen ? (
     <FontAwesomeIcon
       icon={faChevronUp}
-      className="absolute right-2 top-3 text-primary"
+      className="absolute right-2 top-1/3 text-primary"
     />
   ) : (
     <FontAwesomeIcon
       icon={faChevronDown}
-      className="absolute right-2 top-3 text-primary"
+      className="absolute right-2 top-1/3 text-primary"
     />
   );
 
   return (
     <li className={classesLi} onClick={() => onClick(itemId)}>
-      {arrowIcon}
       <button
         type="button"
         aria-expanded={isOpen}
-        className="w-full p-3 text-left font-bold"
+        className="relative w-full p-3 text-left font-bold"
         aria-controls={accessibleId}
       >
+        {arrowIcon}
         {title}
       </button>
       <p id={accessibleId} className={classesContent} {...attributesContent}>

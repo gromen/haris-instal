@@ -12,6 +12,12 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
+import img from '@/public/slides/slide-5.jpg';
+import img1 from '@/public/slides/slide-2.jpg';
+import img2 from '@/public/slides/slide-3.jpg';
+import img3 from '@/public/slides/slide-4.jpg';
+import img4 from '@/public/slides/slide-1.jpg';
 
 const StyledSlide = styled.div<{ $imgUrl: string }>`
   background: url(${({ $imgUrl }) => $imgUrl}) no-repeat;
@@ -44,7 +50,7 @@ export default function SliderMain() {
   function NextArrow({ onClick }: ArrowProps) {
     return (
       <button
-        className="left-40 absolute top-32 border-primary border-2 p-4 hover:border-navy-800 "
+        className="absolute left-40 top-32 border-2 border-primary p-4 hover:border-navy-800 "
         type="button"
         onClick={onClick}
       >
@@ -60,7 +66,7 @@ export default function SliderMain() {
   function PrevArrow({ onClick }: ArrowProps) {
     return (
       <button
-        className="left-40 absolute z-10 top-52 border-primary border-2 p-4 hover:border-navy-800 "
+        className="absolute left-40 top-52 z-10 border-2 border-primary p-4 hover:border-navy-800 "
         type="button"
         onClick={onClick}
       >
@@ -75,8 +81,9 @@ export default function SliderMain() {
 
   return (
     <Slider {...settings} className="slider-main">
-      <StyledSlide $imgUrl={'/slides/slide-1.jpg'}>
-        <div>
+      <div className="relative">
+        <Image src={img} alt={'img'} objectFit="cover" />
+        <div className="left top-50 absolute -translate-y-16 p-4 lg:w-1/2">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -87,21 +94,22 @@ export default function SliderMain() {
           <div className="flex">
             <button
               type="button"
-              className="bg-primary text-white  py-2 px-4 mr-5"
+              className="mr-5 bg-primary px-4 py-2 text-white"
             >
               Discover more
             </button>
             <button
               type="button"
-              className="bg-transparent text-white border-primary border-2 py-2 px-4"
+              className="border-2 border-primary bg-transparent px-4 py-2 text-white"
             >
               Nasze Usługi
             </button>
           </div>
         </div>
-      </StyledSlide>
-      <StyledSlide $imgUrl={'/slides/slide-2.jpg'}>
-        <div>
+      </div>
+      <div className="relative">
+        <Image src={img1} alt={'img'} objectFit="cover" />
+        <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -112,21 +120,22 @@ export default function SliderMain() {
           <div className="flex">
             <button
               type="button"
-              className="bg-primary text-white  py-2 px-4 mr-5"
+              className="mr-5 bg-primary  px-4 py-2 text-white"
             >
               Discover more
             </button>
             <button
               type="button"
-              className="bg-transparent text-white border-primary border-2 py-2 px-4"
+              className="border-2 border-primary bg-transparent px-4 py-2 text-white"
             >
               Nasze Usługi
             </button>
           </div>
         </div>
-      </StyledSlide>
-      <StyledSlide $imgUrl={'/slides/slide-3.jpg'}>
-        <div>
+      </div>
+      <div className="relative">
+        <Image src={img2} alt={'img'} objectFit="cover" />
+        <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -137,21 +146,22 @@ export default function SliderMain() {
           <div className="flex">
             <button
               type="button"
-              className="bg-primary text-white  py-2 px-4 mr-5"
+              className="mr-5 bg-primary  px-4 py-2 text-white"
             >
               Discover more
             </button>
             <button
               type="button"
-              className="bg-transparent text-white border-primary border-2 py-2 px-4"
+              className="border-2 border-primary bg-transparent px-4 py-2 text-white"
             >
               Nasze Usługi
             </button>
           </div>
         </div>
-      </StyledSlide>
-      <StyledSlide $imgUrl={'/slides/slide-4.jpg'}>
-        <div>
+      </div>
+      <div className="relative">
+        <Image src={img3} alt={'img'} objectFit="cover" />
+        <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -162,19 +172,45 @@ export default function SliderMain() {
           <div className="flex">
             <button
               type="button"
-              className="bg-primary text-white  py-2 px-4 mr-5"
+              className="mr-5 bg-primary  px-4 py-2 text-white"
             >
               Discover more
             </button>
             <button
               type="button"
-              className="bg-transparent text-white border-primary border-2 py-2 px-4"
+              className="border-2 border-primary bg-transparent px-4 py-2 text-white"
             >
               Nasze Usługi
             </button>
           </div>
         </div>
-      </StyledSlide>
+      </div>{' '}
+      <div className="relative">
+        <Image src={img4} alt={'img'} objectFit="cover" />
+        <div className="absolute">
+          <h2>We provide Effective Plumbing Solution</h2>
+          <small>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+            consectetur debitis deleniti dolores error est facere fuga incidunt,
+            laboriosam magnam necessitatibus, officia optio perferendis quia
+            quisquam reiciendis reprehenderit similique voluptas.
+          </small>
+          <div className="flex">
+            <button
+              type="button"
+              className="mr-5 bg-primary  px-4 py-2 text-white"
+            >
+              Discover more
+            </button>
+            <button
+              type="button"
+              className="border-2 border-primary bg-transparent px-4 py-2 text-white"
+            >
+              Nasze Usługi
+            </button>
+          </div>
+        </div>
+      </div>
     </Slider>
   );
 }
