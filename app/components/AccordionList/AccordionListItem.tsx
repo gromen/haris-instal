@@ -23,15 +23,15 @@ export default function AccordionListItem({
     { 'border-b border-t border-primary': isOpen },
     'relative mb-5 bg-gray-400',
   ]);
-
   const classesContent = clsx([
     'border-t text-sm transition-height transition-opacity transition-spacing pl-3',
     { 'opacity-100 h-full py-2 border-t-gray-500': isOpen },
     { 'opacity-0 h-0': !isOpen },
   ]);
-
   const accessibleId = `accordionItem-${accordionItemIndex}`;
-  const tabIndexContent = isOpen ? 0 : undefined;
+  const attributesContent = {
+    tabIndex: isOpen ? 0 : undefined,
+  };
 
   return (
     <li className={classesLi} onClick={() => onClick(itemId)}>
@@ -54,11 +54,7 @@ export default function AccordionListItem({
       >
         {title}
       </button>
-      <p
-        id={accessibleId}
-        className={classesContent}
-        tabIndex={tabIndexContent}
-      >
+      <p id={accessibleId} className={classesContent} {...attributesContent}>
         {content}
       </p>
     </li>
