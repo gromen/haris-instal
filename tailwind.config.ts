@@ -7,6 +7,10 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    transitionProperty: {
+      height: 'height',
+      spacing: 'margin, padding',
+    },
     colors: {
       transparent: 'transparent',
       primary: '#e93a14',

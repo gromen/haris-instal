@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { clsx } from 'clsx';
 
 type AccordionListItemProps = {
   title: string;
@@ -7,6 +8,7 @@ type AccordionListItemProps = {
   isOpen: boolean;
   onClick: (itemId: string) => void;
   itemId: string;
+  accordionItemIndex: string | number;
 };
 
 export default function AccordionListItem({
@@ -15,31 +17,45 @@ export default function AccordionListItem({
   onClick,
   itemId,
   isOpen,
+  accordionItemIndex,
 }: AccordionListItemProps) {
+  const classesLi = clsx([
+    { 'border-b border-t border-primary': isOpen },
+    'relative mb-5 bg-gray-400',
+  ]);
+
+  const classesContent = clsx([
+    'border-t text-sm transition-height transition-opacity transition-spacing pl-3',
+    { 'opacity-100 h-full py-2 border-t-gray-500': isOpen },
+    { 'opacity-0 h-0': !isOpen },
+  ]);
+
+  const accessibleId = `accordionItem-${accordionItemIndex}`;
+
   return (
-    <li
-      className={`relative mb-5 bg-gray-400 p-3 transition ${
-        isOpen ? 'border-b border-t border-primary' : ''
-      }`}
-      onClick={() => onClick(itemId)}
-    >
+    <li className={classesLi} onClick={() => onClick(itemId)}>
       {isOpen ? (
         <FontAwesomeIcon
           icon={faChevronUp}
-          className="absolute right-2 text-primary"
+          className="absolute right-2 top-3 text-primary"
         />
       ) : (
         <FontAwesomeIcon
           icon={faChevronDown}
-          className="absolute right-2 text-primary"
+          className="absolute right-2 top-3 text-primary"
         />
       )}
-      <h6 className="font-bold">{title}</h6>
-      {isOpen && (
-        <p className="mt-2 border-t border-t-gray-500 pt-2 text-sm">
-          {content}
-        </p>
-      )}
+      <button
+        type="button"
+        aria-expanded={isOpen}
+        className="w-full p-3 text-left font-bold"
+        aria-controls={accessibleId}
+      >
+        {title}
+      </button>
+      <p id={accessibleId} className={classesContent}>
+        {content}
+      </p>
     </li>
   );
 }

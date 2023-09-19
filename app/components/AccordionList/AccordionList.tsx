@@ -41,7 +41,7 @@ export default function AccordionList() {
 
   return (
     <ul>
-      {accordionItems?.map((item) => (
+      {accordionItems?.map((item, index) => (
         <AccordionListItem
           isOpen={item.itemId === openItemId}
           title={item.title}
@@ -49,6 +49,7 @@ export default function AccordionList() {
           itemId={item.itemId}
           key={item.itemId}
           onClick={onItemClick}
+          accordionItemIndex={index}
         />
       ))}
     </ul>
