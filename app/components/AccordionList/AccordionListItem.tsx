@@ -32,20 +32,21 @@ export default function AccordionListItem({
   const attributesContent = {
     tabIndex: isOpen ? 0 : undefined,
   };
+  const arrowIcon = isOpen ? (
+    <FontAwesomeIcon
+      icon={faChevronUp}
+      className="absolute right-2 top-3 text-primary"
+    />
+  ) : (
+    <FontAwesomeIcon
+      icon={faChevronDown}
+      className="absolute right-2 top-3 text-primary"
+    />
+  );
 
   return (
     <li className={classesLi} onClick={() => onClick(itemId)}>
-      {isOpen ? (
-        <FontAwesomeIcon
-          icon={faChevronUp}
-          className="absolute right-2 top-3 text-primary"
-        />
-      ) : (
-        <FontAwesomeIcon
-          icon={faChevronDown}
-          className="absolute right-2 top-3 text-primary"
-        />
-      )}
+      {arrowIcon}
       <button
         type="button"
         aria-expanded={isOpen}

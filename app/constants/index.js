@@ -41,3 +41,30 @@ export const slides = [
     alt: 'logo trusted partner',
   },
 ];
+
+export const slidesProjects = [
+  {
+    id: 1,
+    url: '/projects/project-1',
+    title: 'project1',
+    imageUrl: '/public/images/image1.jpg',
+  },
+  {
+    id: 2,
+    url: '/projects/project-2',
+    title: 'project2',
+    imageUrl: '/public/images/image1.jpg',
+  },
+  {
+    id: 3,
+    url: '/projects/project-3',
+    title: 'project3',
+    imageUrl: '/public/images/image1.jpg',
+  },
+  {
+    id: 4,
+    url: '/projects/project-4',
+    title: 'project4',
+    imageUrl: '/public/images/image1.jpg',
+  },
+];
