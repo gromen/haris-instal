@@ -36,7 +36,7 @@ export default function SliderProjects() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
+          dots: false,
         },
       },
     ],
@@ -53,7 +53,7 @@ export default function SliderProjects() {
   function NextArrow({ onClick }: ArrowProps) {
     return (
       <button
-        className="absolute left-40 top-32 border-2 border-primary p-4 hover:border-navy-800"
+        className="invisible absolute -top-20 right-0 border-2 border-primary p-4 hover:border-navy-800 md:visible"
         type="button"
         onClick={onClick}
         disabled={isDisabled()}
@@ -70,7 +70,7 @@ export default function SliderProjects() {
   function PrevArrow({ onClick }: ArrowProps) {
     return (
       <button
-        className="absolute left-40 top-52 z-10 border-2 border-primary p-4 hover:border-navy-800 "
+        className="invisible absolute -top-20 right-16 z-10 border-2 border-primary p-4 hover:border-navy-800 md:visible "
         type="button"
         onClick={onClick}
         disabled={isDisabled('prev')}
