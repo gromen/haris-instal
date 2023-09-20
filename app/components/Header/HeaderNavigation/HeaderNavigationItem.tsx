@@ -5,6 +5,7 @@ type HeaderNavigationItemProps = {
   href: string;
   label: string;
   classes?: string;
+  setOpened: (param: boolean) => void;
 };
 
 export default function HeaderNavigationItem({
@@ -12,6 +13,7 @@ export default function HeaderNavigationItem({
   label,
   href,
   classes,
+  setOpened,
 }: HeaderNavigationItemProps) {
   return (
     <li
@@ -19,7 +21,7 @@ export default function HeaderNavigationItem({
         classes ? ` ${classes}` : ''
       }`}
     >
-      <Link href={href} aria-label={label}>
+      <Link href={href} aria-label={label} onClick={() => setOpened(false)}>
         {title}
       </Link>
     </li>
