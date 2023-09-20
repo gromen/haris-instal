@@ -8,12 +8,22 @@ import {
 export const settings = {
   dots: false,
   fade: true,
-  infinite: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 1,
+  autoplay: true,
   slidesToScroll: 1,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows: false,
+        dots: false,
+      },
+    },
+  ],
 };
 
 export const settingsProjects = {

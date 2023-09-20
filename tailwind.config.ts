@@ -10,6 +10,7 @@ const config: Config = {
     transitionProperty: {
       height: 'height',
       spacing: 'margin, padding',
+      opacity: 'opacity',
     },
     colors: {
       transparent: 'transparent',

@@ -10,13 +10,12 @@ import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import { usePathname } from 'next/navigation';
 
 export default function HeaderNavigation() {
-  const pathname = usePathname();
   const [opened, setOpened] = useState<boolean>(false);
   const onClickHamburger = () => setOpened((prevState) => !prevState);
   const classesUl = clsx([
-    'w-full text-center text-4xl md:text-lg space-y-6 font-bold font- flex flex-col items-center justify-center md:w-auto md:text-left absolute md:static md:flex-row left-0 z-10 bg-white',
-    { 'top-0 h-full z-20': opened },
-    { 'mt-0 -top-[500%]': !opened },
+    'w-full h-full text-center transition-opacity text-4xl md:text-lg top-0 space-y-6 md:space-y-0 font-bold flex flex-col items-center justify-center md:w-auto md:text-left absolute md:static md:flex-row left-0 bg-white',
+    { 'opacity-100 z-20': opened },
+    { 'mt-0 opacity-0 -z-10': !opened },
   ]);
   const classesHamburger = clsx([
     'flex md:hidden',
@@ -27,10 +26,6 @@ export default function HeaderNavigation() {
     document.body.classList.toggle('overflow-hidden', opened);
     document.body.classList.toggle('md:overflow-auto', opened);
   }, [opened]);
-
-  useEffect(() => {
-    console.log(pathname);
-  }, [pathname]);
 
   return (
     <nav className="flex-c text z text- flex w-full flex-wrap justify-between self-center p-4 md:self-start">

@@ -30,6 +30,16 @@ export default function SliderTrustedPartner() {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     afterChange: (currentSlide: number) => setCurrentSlide(currentSlide),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          autoplay: true,
+          arrows: false,
+          dots: false,
+        },
+      },
+    ],
   };
 
   const isDisabled = (arrow = 'next'): boolean => {
@@ -43,7 +53,7 @@ export default function SliderTrustedPartner() {
   function NextArrow({ onClick }: ArrowProps) {
     return (
       <button
-        className="left-40 absolute top-32 border-primary border-2 p-4 hover:border-navy-800"
+        className="absolute left-40 top-32 border-2 border-primary p-4 hover:border-navy-800"
         type="button"
         onClick={onClick}
         disabled={isDisabled()}
@@ -60,7 +70,7 @@ export default function SliderTrustedPartner() {
   function PrevArrow({ onClick }: ArrowProps) {
     return (
       <button
-        className="left-40 absolute z-10 top-52 border-primary border-2 p-4 hover:border-navy-800 "
+        className="absolute left-40 top-52 z-10 border-2 border-primary p-4 hover:border-navy-800 "
         type="button"
         onClick={onClick}
         disabled={isDisabled('prev')}
