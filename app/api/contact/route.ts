@@ -1,4 +1,4 @@
-import { sendMail } from '../../service/serviceEmail';
+import { sendMail } from '@/app/services/serviceEmail';
 
 export async function POST(request: Request) {
   const { name, phone, email } = await request.json();

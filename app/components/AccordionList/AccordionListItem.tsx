@@ -53,7 +53,7 @@ export default function AccordionListItem({
         aria-controls={accessibleId}
       >
         {arrowIcon}
-        {title}
+        {Number(accordionItemIndex) + 1}. {title}
       </button>
       <p id={accessibleId} className={classesContent} {...attributesContent}>
         {content}

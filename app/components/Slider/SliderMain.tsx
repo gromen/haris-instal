@@ -17,7 +17,7 @@ export default function SliderMain() {
   return (
     <Slider {...settings} className="slider-main">
       <div className="relative">
-        <Image src={img} alt={'img'} objectFit="cover" />
+        <Image className="mx-auto" src={img} alt={'img'} objectFit="cover" />
         <div className="left top-50 absolute -translate-y-16 p-4 lg:w-1/2">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
@@ -43,7 +43,7 @@ export default function SliderMain() {
         </div>
       </div>
       <div className="relative">
-        <Image src={img1} alt={'img'} objectFit="cover" />
+        <Image className="mx-auto" src={img1} alt={'img'} objectFit="cover" />
         <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
@@ -69,7 +69,7 @@ export default function SliderMain() {
         </div>
       </div>
       <div className="relative">
-        <Image src={img2} alt={'img'} objectFit="cover" />
+        <Image className="mx-auto" src={img2} alt={'img'} objectFit="cover" />
         <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
@@ -95,7 +95,7 @@ export default function SliderMain() {
         </div>
       </div>
       <div className="relative">
-        <Image src={img3} alt={'img'} objectFit="cover" />
+        <Image className="mx-auto" src={img3} alt={'img'} objectFit="cover" />
         <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
@@ -119,9 +119,9 @@ export default function SliderMain() {
             </button>
           </div>
         </div>
-      </div>{' '}
+      </div>
       <div className="relative">
-        <Image src={img4} alt={'img'} objectFit="cover" />
+        <Image className="mx-auto" src={img4} alt={'img'} objectFit="cover" />
         <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>

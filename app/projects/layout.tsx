@@ -10,5 +10,5 @@ export default function ProjectLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="container mx-auto p-4">tralala {children}</main>;
+  return <main className="container mx-auto p-4">{children}</main>;
 }
