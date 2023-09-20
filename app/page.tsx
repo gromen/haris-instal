@@ -10,6 +10,7 @@ import ChooseOurServices from '@/app/components/ChooseOurServices/ChooseOurServi
 import TotalStatistics from '@/app/components/TotalStatistics/TotalStatistics';
 import Faq from '@/app/components/Faq/Faq';
 import Projects from '@/app/components/Projects/Projects';
+import Footer from '@/app/components/Footer/Footer';
 
 export default function Home() {
   config.autoAddCss = false;
@@ -27,6 +28,7 @@ export default function Home() {
         <Faq />
         <Projects />
       </main>
+      <Footer />
     </>
   );
 }
