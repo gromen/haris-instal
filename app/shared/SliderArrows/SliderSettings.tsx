@@ -11,7 +11,6 @@ export const settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 1,
-  autoplay: true,
   slidesToScroll: 1,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
@@ -19,6 +18,7 @@ export const settings = {
     {
       breakpoint: 1024,
       settings: {
+        autoplay: true,
         arrows: false,
         dots: false,
       },

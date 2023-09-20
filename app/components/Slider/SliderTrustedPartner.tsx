@@ -34,7 +34,7 @@ export default function SliderTrustedPartner() {
       {
         breakpoint: 1024,
         settings: {
-          autoplay: true,
+          autoplay: false,
           arrows: false,
           dots: false,
         },

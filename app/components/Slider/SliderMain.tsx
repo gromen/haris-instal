@@ -18,7 +18,7 @@ export default function SliderMain() {
     <Slider {...settings} className="slider-main">
       <div className="relative">
         <Image className="mx-auto" src={img} alt={'img'} objectFit="cover" />
-        <div className="left top-50 absolute -translate-y-16 p-4 lg:w-1/2">
+        <div className="absolute top-0 z-10 h-full w-full bg-secondary bg-opacity-50 p-4 text-white">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
