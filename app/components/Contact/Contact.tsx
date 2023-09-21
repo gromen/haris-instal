@@ -1,5 +1,4 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import Alert from '@/app/components/Alert/Alert';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { eventBus } from '@/app/utils/event-bus';
@@ -8,18 +7,6 @@ const initialState = { name: '', email: '', phone: '' };
 export default function Contact() {
   const [values, setValues] = useState(initialState);
   const [loading, setLoading] = useState(false);
-  // const [alert, setAlert] = useState<{
-  //   variant?: 'success' | 'error';
-  //   message?: string;
-  // }>({});
-
-  // useEffect(() => {
-  //   function handleAdd() {
-  //     console.log('as');
-  //     setAlert({ message: 'sasa', variant: 'success' });
-  //   }
-  //   eventBus.on('submit', handleAdd);
-  // }, []);
 
   const onSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -30,7 +17,6 @@ export default function Contact() {
     });
     const message = await response.text();
     const variant = response.ok ? 'success' : 'error';
-    // setAlert({ variant, message });
     eventBus.emit('submit', { variant, message });
     setLoading(false);
   };
