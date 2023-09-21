@@ -23,7 +23,7 @@ export default function HeaderNavigation() {
     'flex md:hidden',
     { 'absolute right-10 top-10 z-50': opened },
   ]);
-  const items = navigationItems.map((item) => (
+  const navItems = navigationItems.map((item) => (
     <HeaderNavigationItem
       key={item.title}
       title={item.title}
@@ -50,7 +50,7 @@ export default function HeaderNavigation() {
         />
       </button>
       <div className="w-full"></div>
-      <ul className={classesUl}>{items}</ul>
+      <ul className={classesUl}>{navItems}</ul>
     </nav>
   );
 }

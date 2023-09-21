@@ -26,16 +26,16 @@ export default function Contact() {
   return (
     <form
       onSubmit={onSubmit}
-      className="items-center justify-between gap-5 sm:flex"
+      className="items-center justify-between gap-5 lg:flex"
     >
-      <div className="mb-4 sm:mb-0">
-        <p className="pb-2 text-sm text-primary">Emergency services</p>
+      <div className="mb-4 lg:mb-0">
+        <p className="pb-2 text-lg text-primary">Emergency services</p>
         <p className="text-2xl font-semibold">
           Having an urgent problem and can&apos;t wait?
         </p>
       </div>
-      <div className="grow items-center gap-4 sm:flex">
-        <label htmlFor="name" className="inline-block w-full sm:w-auto">
+      <div className="grow items-center gap-4 lg:flex">
+        <label htmlFor="name" className="inline-block w-full lg:w-auto">
           Twoje imię<sup>*</sup>
           <input
             required
@@ -49,12 +49,12 @@ export default function Contact() {
         </label>
         <label
           htmlFor="email"
-          className="mt-2 inline-block w-full sm:mt-0 sm:w-auto"
+          className="mt-2 inline-block w-full lg:mt-0 lg:w-auto"
         >
           Twój email<sup>*</sup>
           <input
             required
-            className="mt-3 block h-10 w-full p-3 text-primary sm:inline-block"
+            className="mt-3 block h-10 w-full p-3 text-primary lg:inline-block"
             type="email"
             id="email"
             name="email"
@@ -64,12 +64,12 @@ export default function Contact() {
         </label>
         <label
           htmlFor="phone"
-          className="mt-2 inline-block w-full sm:mt-0 sm:w-auto"
+          className="mt-2 inline-block w-full lg:mt-0 lg:w-auto"
         >
           Telefon<sup>*</sup>
           <input
             required
-            className="mt-3 block h-10 w-full p-3 text-primary sm:inline-block"
+            className="mt-3 block h-10 w-full p-3 text-primary lg:inline-block"
             type="tel"
             id="phone"
             name="phone"
@@ -79,7 +79,7 @@ export default function Contact() {
         </label>
         <button
           type="submit"
-          className="mt-8 w-full bg-primary p-4 text-white transition-colors hover:bg-navy-100 sm:block sm:w-auto"
+          className="transition-colors mt-8 w-full bg-primary p-4 text-white hover:bg-navy-100 sm:w-auto lg:block"
           disabled={disabled}
         >
           Wyślij

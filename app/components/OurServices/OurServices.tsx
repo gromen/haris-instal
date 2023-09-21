@@ -1,27 +1,17 @@
 import Service from '@/app/components/OurServices/Service';
 import { services } from '@/app/constants';
+import Heading from '@/app/components/Heading/Heading';
 
 export default function OurServices() {
   return (
     <section className="container mx-auto bg-gray-400 p-4 lg:p-28">
-      <p className="text-sm font-semibold text-primary">Our services</p>
-      <div className="flex items-center justify-between">
-        <h3 className="text-3xl font-semibold">Sprawdź nasze usługi</h3>
-        <button
-          type="button"
-          className="bg-primary p-3 text-white hover:bg-navy-100"
-        >
-          Explore all services
-        </button>
-      </div>
-      <div className=" gap-5 text-center md:flex md:justify-around">
+      <Heading title="Sprawdź nasze usługi" subtitle="Nasze usługi" />
+      <div className=" gap-5 text-center lg:flex lg:justify-around">
         {services.map((service) => (
           <Service
             key={service.title}
             title={service.title}
             body={service.body}
-            imgUrl={service.imgUrl}
-            imgAlt={service.imgAlt}
           />
         ))}
       </div>
