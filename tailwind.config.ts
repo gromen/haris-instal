@@ -7,6 +7,15 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    keyframes: {
+      show: {
+        '0%': { transform: 'translatey(-50%)', opacity: '0' },
+        '100%': { transform: 'translatey(0%)', opacity: '1' },
+      },
+    },
+    animation: {
+      show: 'show .2s linear',
+    },
     transitionProperty: {
       height: 'height',
       spacing: 'margin, padding',

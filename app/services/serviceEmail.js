@@ -23,7 +23,6 @@ export async function sendMail(subject, toEmail, text, cc) {
         console.error(error);
         reject(error);
       } else {
-        console.log(response.envelope);
         resolve(response);
       }
     });
