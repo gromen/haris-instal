@@ -90,7 +90,7 @@ export default function Contact() {
             className="transition-colors mt-8 flex w-full items-center gap-2 bg-primary p-4 text-white hover:bg-navy-100 sm:w-auto"
             disabled={disabled}
           >
-            {!loading && (
+            {loading && (
               <FontAwesomeIcon icon={faSpinner} className="animate-spin" />
             )}
             {!loading ? 'Wyślij' : 'Wysyłanie'}
