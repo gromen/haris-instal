@@ -19,6 +19,11 @@ export const services = [
   },
 ];
 
+export const navigationItems = [
+  { title: 'Home', href: '/', label: 'Home page', classes: 'md:pr-6' },
+  { title: 'O nas', href: '/o-nas', label: 'O nas', classes: 'md:pr-6' },
+  { title: 'Kontakt', href: '/kontakt', label: 'Kontakt', classes: '' },
+];
 export const slides = [
   {
     id: 'slide-1',

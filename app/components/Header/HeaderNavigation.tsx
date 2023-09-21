@@ -7,20 +7,31 @@ import { useEffect, useState } from 'react';
 import { clsx } from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
-import { usePathname } from 'next/navigation';
+import useWindowSize from '@/app/hooks/useWindowSize';
+import { navigationItems } from '@/app/constants';
 
 export default function HeaderNavigation() {
+  const [isMobile] = useWindowSize();
   const [opened, setOpened] = useState<boolean>(false);
   const onClickHamburger = () => setOpened((prevState) => !prevState);
   const classesUl = clsx([
     'w-full h-full text-center transition-opacity text-4xl md:text-lg top-0 space-y-6 md:space-y-0 font-bold flex flex-col items-center justify-center md:w-auto md:text-left absolute md:static md:flex-row left-0 bg-white',
-    { 'opacity-100 z-20': opened },
-    { 'mt-0 opacity-0 -z-10': !opened },
+    { 'opacity-100 z-20': opened && isMobile },
+    { 'mt-0 opacity-0 -z-10': !opened && isMobile },
   ]);
   const classesHamburger = clsx([
     'flex md:hidden',
     { 'absolute right-10 top-10 z-50': opened },
   ]);
+  const items = navigationItems.map((item) => (
+    <HeaderNavigationItem
+      key={item.title}
+      title={item.title}
+      href={item.href}
+      label={item.label}
+      setOpened={setOpened}
+    />
+  ));
 
   useEffect(() => {
     document.body.classList.toggle('overflow-hidden', opened);
@@ -39,28 +50,7 @@ export default function HeaderNavigation() {
         />
       </button>
       <div className="w-full"></div>
-      <ul className={classesUl}>
-        <HeaderNavigationItem
-          title={'Home'}
-          href={'/'}
-          label="Home page"
-          classes={'md:pr-6'}
-          setOpened={setOpened}
-        />
-        <HeaderNavigationItem
-          title={'O nas'}
-          href={'/o-nas'}
-          label="O nas"
-          classes={'md:pr-6'}
-          setOpened={setOpened}
-        />
-        <HeaderNavigationItem
-          title={'Kontakt'}
-          href={'/kontakt'}
-          label="Kontakt"
-          setOpened={setOpened}
-        />
-      </ul>
+      <ul className={classesUl}>{items}</ul>
     </nav>
   );
 }

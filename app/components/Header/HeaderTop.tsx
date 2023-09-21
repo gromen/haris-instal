@@ -4,12 +4,12 @@ import { faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 export default function HeaderTop() {
   return (
-    <div className="header__top flex text-white">
-      <div className="relative bg-secondary p-6 md:basis-3/12 after:block after:absolute after:-skew-x-30 after:skew-y-0 after:left-0 after:h-full after:top-0 after:origin-bottom-right after:w-full after:bg-secondary">
-        <div className="z-10 relative">Witamy na stronie haris-instal 😼</div>
+    <div className="header__top hidden text-white lg:flex">
+      <div className="relative bg-secondary p-6 after:absolute after:left-0 after:top-0 after:block after:h-full after:w-full after:origin-bottom-right after:-skew-x-30 after:skew-y-0 after:bg-secondary md:basis-3/12">
+        <div className="relative z-10">Witamy na stronie haris-instal 😼</div>
       </div>
 
-      <div className="header__socialMedia p-2 md:p-6 bg-primary grow flex items-center justify-end">
+      <div className="header__socialMedia flex grow items-center justify-end bg-primary p-2 md:p-6">
         <Link href="/">
           <FontAwesomeIcon
             icon={faWhatsapp}

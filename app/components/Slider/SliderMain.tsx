@@ -17,7 +17,12 @@ export default function SliderMain() {
   return (
     <Slider {...settings} className="slider-main">
       <div className="relative">
-        <Image className="mx-auto" src={img} alt={'img'} objectFit="cover" />
+        <Image
+          className="mx-auto"
+          src={img}
+          alt={'img'}
+          style={{ objectFit: 'cover' }}
+        />
         <div className="absolute top-0 z-10 h-full w-full bg-secondary bg-opacity-50 p-4 text-white">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
@@ -43,7 +48,12 @@ export default function SliderMain() {
         </div>
       </div>
       <div className="relative">
-        <Image className="mx-auto" src={img1} alt={'img'} objectFit="cover" />
+        <Image
+          className="mx-auto"
+          src={img1}
+          alt={'img'}
+          style={{ objectFit: 'cover' }}
+        />
         <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
@@ -69,7 +79,12 @@ export default function SliderMain() {
         </div>
       </div>
       <div className="relative">
-        <Image className="mx-auto" src={img2} alt={'img'} objectFit="cover" />
+        <Image
+          className="mx-auto"
+          src={img2}
+          alt={'img'}
+          style={{ objectFit: 'cover' }}
+        />
         <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
@@ -95,7 +110,12 @@ export default function SliderMain() {
         </div>
       </div>
       <div className="relative">
-        <Image className="mx-auto" src={img3} alt={'img'} objectFit="cover" />
+        <Image
+          className="mx-auto"
+          src={img3}
+          alt={'img'}
+          style={{ objectFit: 'cover' }}
+        />
         <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
@@ -121,7 +141,12 @@ export default function SliderMain() {
         </div>
       </div>
       <div className="relative">
-        <Image className="mx-auto" src={img4} alt={'img'} objectFit="cover" />
+        <Image
+          className="mx-auto"
+          src={img4}
+          alt={'img'}
+          style={{ objectFit: 'cover' }}
+        />
         <div className="absolute">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
