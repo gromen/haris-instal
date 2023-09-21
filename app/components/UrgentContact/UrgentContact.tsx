@@ -19,8 +19,8 @@ export default function UrgentContact() {
   }, []);
 
   return (
-    <section className="container mx-auto ">
-      {alert.message && (
+    <section className="container mx-auto p-4 lg:p-0">
+      {alert.variant && (
         <Alert
           variant={alert.variant}
           message={alert.message}
