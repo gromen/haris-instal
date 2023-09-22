@@ -4,6 +4,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { eventBus } from '@/app/utils/event-bus';
 
 const initialState = { name: '', email: '', phone: '' };
+
 export default function Contact() {
   const [values, setValues] = useState(initialState);
   const [loading, setLoading] = useState(false);
@@ -37,9 +38,9 @@ export default function Contact() {
         className="items-center justify-between gap-5 lg:flex"
       >
         <div className="mb-4 lg:mb-0">
-          <p className="pb-2 text-lg text-primary">Emergency services</p>
+          <p className="pb-2 text-lg text-primary">Sytuacje awaryjne</p>
           <p className="text-2xl font-semibold">
-            Having an urgent problem and can&apos;t wait?
+            Masz jakiś problem i nie możesz czekać ?
           </p>
         </div>
         <div className="grow items-center gap-4 lg:flex">

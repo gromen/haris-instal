@@ -5,6 +5,7 @@ import {
   faCircleInfo,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
+import { forwardRef, useImperativeHandle, useRef } from 'react';
 
 export interface AlertProps {
   variant?: 'success' | 'error';
@@ -12,11 +13,22 @@ export interface AlertProps {
   onClickCloseAlert: () => void;
 }
 
-export default function Alert({
-  variant,
-  message,
-  onClickCloseAlert,
-}: AlertProps) {
+const Alert = forwardRef(function Alert(
+  { variant, message, onClickCloseAlert }: AlertProps,
+  ref
+) {
+  const alertRef = useRef<HTMLParagraphElement | null>(null);
+
+  useImperativeHandle(ref, () => {
+    return {
+      scrollToView() {
+        if (alertRef.current) {
+          alertRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      },
+    };
+  });
+
   const classes = clsx([
     'relative p-4 my-4 border bg-opacity-30 rounded flex items-center animate-show font-semibold',
     { 'border-[green] bg-[green] text-[green]': variant === 'success' },
@@ -34,7 +46,7 @@ export default function Alert({
   ]);
 
   return (
-    <p className={classes}>
+    <p className={classes} ref={alertRef}>
       <FontAwesomeIcon
         icon={variant === 'success' ? faCircleInfo : faCircleXmark}
         className={classesIcon}
@@ -50,4 +62,5 @@ export default function Alert({
       </span>
     </p>
   );
-}
+});
+export default Alert;

@@ -1,3 +1,4 @@
+'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faComments,
@@ -7,11 +8,18 @@ import {
 import Link from 'next/link';
 
 export default function HeaderContactInfo() {
+  const onClickButton = () => {
+    const form = document.querySelector('form');
+    if (form) {
+      form.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <address className="grow w-full hidden md:flex justify-between not-italic items-center ">
+    <address className="hidden w-full grow items-center justify-between not-italic md:flex ">
       <ul className="flex">
-        <li className="flex p-4 items-center">
-          <div className="rounded-full bg-gray-400 ring-2 ring-gray-500 w-9 h-9 mr-3 flex justify-center items-center">
+        <li className="flex items-center p-4">
+          <div className="mr-3 flex h-9 w-9 items-center justify-center rounded-full bg-gray-400 ring-2 ring-gray-500">
             <FontAwesomeIcon
               icon={faPhone}
               className="text-primary"
@@ -25,8 +33,8 @@ export default function HeaderContactInfo() {
             </Link>
           </div>
         </li>
-        <li className="flex p-4 items-center">
-          <div className="rounded-full bg-gray-400 ring-2 ring-gray-500 w-9 h-9 mr-4 flex justify-center items-center">
+        <li className="flex items-center p-4">
+          <div className="mr-4 flex h-9 w-9 items-center justify-center rounded-full bg-gray-400 ring-2 ring-gray-500">
             <FontAwesomeIcon
               icon={faComments}
               className="text-primary"
@@ -40,8 +48,8 @@ export default function HeaderContactInfo() {
             </Link>
           </div>
         </li>
-        <li className="flex p-4 items-center">
-          <div className="rounded-full bg-gray-400 ring-2 ring-gray-500 w-9 h-9 mr-4 flex justify-center items-center">
+        <li className="flex items-center p-4">
+          <div className="mr-4 flex h-9 w-9 items-center justify-center rounded-full bg-gray-400 ring-2 ring-gray-500">
             <FontAwesomeIcon
               icon={faLocationDot}
               className="text-primary"
@@ -56,7 +64,8 @@ export default function HeaderContactInfo() {
       </ul>
       <button
         type="button"
-        className="p-4 mr-4 bg-navy-800 transition-colors text-white hover:bg-navy-100 w-1/6"
+        className="transition-colors mr-4 w-1/6 bg-navy-800 p-4 text-white hover:bg-navy-100"
+        onClick={onClickButton}
       >
         Zapytaj
       </button>

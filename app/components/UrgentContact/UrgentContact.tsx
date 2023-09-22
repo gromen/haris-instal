@@ -3,19 +3,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import Contact from '@/app/components/Contact/Contact';
 import { eventBus } from '@/app/utils/event-bus';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Alert, { AlertProps } from '@/app/components/Alert/Alert';
+
+interface AlertComponent {
+  scrollToView: () => void;
+}
 
 export default function UrgentContact() {
   const [alert, setAlert] = useState<{
     variant?: 'success' | 'error';
     message?: string;
   }>({});
+  const alertRef = useRef<AlertComponent | null>(null);
 
   useEffect(() => {
-    eventBus.on('submit', (data: AlertProps) => {
+    const displayAlert = (data: AlertProps) => {
       setAlert(data);
-    });
+      requestAnimationFrame(() => {
+        if (data.variant && alertRef.current) {
+          alertRef.current.scrollToView();
+        }
+      });
+    };
+
+    eventBus.on('submit', displayAlert);
+
+    return () => {
+      eventBus.off('submit', displayAlert);
+    };
   }, []);
 
   return (
@@ -25,6 +41,7 @@ export default function UrgentContact() {
           variant={alert.variant}
           message={alert.message}
           onClickCloseAlert={() => setAlert({})}
+          ref={alertRef}
         />
       )}
       <div className="bg-secondary text-white md:flex">
