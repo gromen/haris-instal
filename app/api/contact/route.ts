@@ -5,9 +5,10 @@ export async function POST(request: Request) {
   try {
     // IMPORTANT remember that email from gmail must have enabled 2FA !!!!
     await sendMail(
-      `Prośba o kontakt - ${name}`,
-      'gromson101@gmail.com',
-      `Prośba o kontakt na nr tel: ${phone} lub adres email: ${email}`,
+      `${name} prosi o kontakt`,
+      'haris.instal@onet.pl',
+      `Email od ${email}
+        Prośba o kontakt na nr tel: ${phone} lub w/w adres email: ${email}`,
       email
     );
 

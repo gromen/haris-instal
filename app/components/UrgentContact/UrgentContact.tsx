@@ -21,7 +21,7 @@ export default function UrgentContact() {
     const displayAlert = (data: AlertProps) => {
       setAlert(data);
       requestAnimationFrame(() => {
-        if (data.variant && alertRef.current) {
+        if (alertRef.current) {
           alertRef.current.scrollToView();
         }
       });

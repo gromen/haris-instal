@@ -10,18 +10,8 @@ export default function HeaderTop() {
       </div>
 
       <div className="header__socialMedia flex grow items-center justify-end bg-primary p-2 md:p-6">
-        <Link href="/">
-          <FontAwesomeIcon
-            icon={faWhatsapp}
-            className="pr-4"
-            style={{ fontSize: 25, color: 'white' }}
-          />
-        </Link>
-        <Link href="/">
-          <FontAwesomeIcon
-            icon={faFacebook}
-            style={{ fontSize: 25, color: 'white' }}
-          />
+        <Link href="//www.facebook.com/haris.instal.92" target="_blank">
+          <FontAwesomeIcon icon={faFacebook} className="text-4xl text-white" />
         </Link>
       </div>
     </div>

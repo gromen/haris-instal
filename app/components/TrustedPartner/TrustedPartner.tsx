@@ -44,7 +44,7 @@ export default function TrustedPartner() {
         <p>Nasi zaufani partnerzy</p>
         <h3>Marki z którymi współpracujemy i w które wierzymy...</h3>
       </div>
-      <div className="grow bg-gray-400 p-4 lg:flex lg:flex-row lg:justify-around">
+      <div className="grow bg-gray-400 p-4 md:flex md:flex-row md:justify-around">
         {images}
       </div>
     </section>

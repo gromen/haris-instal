@@ -9,10 +9,10 @@ export default function Header() {
       <div className="container mx-auto">
         <HeaderTop />
         <div className="flex">
-          <div className="hidden md:flex justify-center basis-2/12">
+          <div className="hidden basis-3/12 justify-center md:flex">
             <Logo />
           </div>
-          <div className="bg-white flex flex-col grow divide-y divide-gray-500">
+          <div className="flex grow flex-col divide-y divide-gray-500 bg-white">
             <HeaderContactInfo />
             <HeaderNavigation />
           </div>

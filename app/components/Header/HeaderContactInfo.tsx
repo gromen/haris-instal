@@ -17,7 +17,7 @@ export default function HeaderContactInfo() {
 
   return (
     <address className="hidden w-full grow items-center justify-between not-italic md:flex ">
-      <ul className="flex">
+      <ul className="flex md:flex-col lg:flex-row">
         <li className="flex items-center p-4">
           <div className="mr-3 flex h-9 w-9 items-center justify-center rounded-full bg-gray-400 ring-2 ring-gray-500">
             <FontAwesomeIcon
@@ -28,8 +28,8 @@ export default function HeaderContactInfo() {
           </div>
           <div className="flex flex-col">
             <div className="text-gray-700">Zadzwoń do nas:</div>
-            <Link href="tel:+48666666666" className="font-bold">
-              +48 666666666
+            <Link href="tel:+48791334999" className="font-bold">
+              +48 791334999
             </Link>
           </div>
         </li>
@@ -43,8 +43,8 @@ export default function HeaderContactInfo() {
           </div>
           <div className="flex flex-col">
             <div className="text-gray-700">Napisz do nas:</div>
-            <Link href="mailto:example@example.com" className="font-bold">
-              example@example.com
+            <Link href="mailto:haris.instal@onet.pl" className="font-bold">
+              haris.instal@onet.pl
             </Link>
           </div>
         </li>
@@ -58,7 +58,7 @@ export default function HeaderContactInfo() {
           </div>
           <div className="flex flex-col">
             <div className="text-gray-700">Lokalizacja:</div>
-            <p className="font-bold">ul. Szkolna 34, Ostrów Mazowiecka</p>
+            <p className="font-bold">ul. Szkolna 17, Ostrów Mazowiecka</p>
           </div>
         </li>
       </ul>
