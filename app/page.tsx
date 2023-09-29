@@ -14,7 +14,7 @@ import Footer from '@/app/components/Footer/Footer';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import AllBlogPosts from '@/app/components/AllBlogPosts';
+import AllBlogPosts from '@/app/AllBlogPosts';
 
 export default function Home() {
   config.autoAddCss = false;
