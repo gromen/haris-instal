@@ -1,17 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBath } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type ServiceProps = {
   title: string;
   body: string;
+  icon: IconProp;
 };
 
-export default function Service({ title, body }: ServiceProps) {
+export default function Service({ title, body, icon }: ServiceProps) {
   return (
     <article className="transition-colors group relative mb-24 mt-16 bg-white p-4 pb-10 pt-24 shadow-xl even:bg-primary even:text-white lg:mb-5">
       <div className="absolute -top-16 left-1/2 flex -translate-x-1/2 transform items-center rounded-full bg-navy-100 bg-opacity-40 p-3">
         <FontAwesomeIcon
-          icon={faBath}
+          icon={icon}
           className="rounded-full bg-navy-800 p-6 text-6xl text-white group-even:bg-white group-even:text-primary"
         />
       </div>

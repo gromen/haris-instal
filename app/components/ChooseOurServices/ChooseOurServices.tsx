@@ -35,7 +35,13 @@ export default function ChooseOurServices() {
           </div>
         </div>
         <div className="lg:w-2/3">
-          <Image src={image} alt="bg" width={640} height={400} />
+          <Image
+            className="ml-auto"
+            src={image}
+            alt="bg"
+            width={640}
+            height={400}
+          />
         </div>
       </div>
     </section>

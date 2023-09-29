@@ -1,21 +1,20 @@
+import { faBath, faToilet, faWrench } from '@fortawesome/free-solid-svg-icons';
+
 export const services = [
   {
     title: 'Basement plumbing',
     body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
-    imgUrl: '/images/logo-trusted-partner-1.svg',
-    imgAlt: 'obrazki',
+    icon: faBath,
   },
   {
     title: 'Drain plumbing',
     body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
-    imgUrl: '/images/logo-trusted-partner-1.svg',
-    imgAlt: 'obrazki',
+    icon: faToilet,
   },
   {
     title: 'Water Line repair',
     body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
-    imgUrl: '/images/logo-trusted-partner-1.svg',
-    imgAlt: 'obrazki',
+    icon: faWrench,
   },
 ];
 

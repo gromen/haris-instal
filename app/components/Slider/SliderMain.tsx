@@ -25,9 +25,9 @@ export default function SliderMain() {
     <Slider {...settings} className="slider-main">
       <StyledSlide
         $imgUrl={'/slides/slide-1.jpg'}
-        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+        className="absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-black-rgba before:bg-opacity-40 lg:h-[800px]"
       >
-        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:gap-y-5 lg:text-3xl">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -53,9 +53,9 @@ export default function SliderMain() {
       </StyledSlide>
       <StyledSlide
         $imgUrl={'/slides/slide-2.jpg'}
-        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+        className="absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-black-rgba before:bg-opacity-40 lg:h-[800px]"
       >
-        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:gap-y-5 lg:text-3xl">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -81,9 +81,9 @@ export default function SliderMain() {
       </StyledSlide>
       <StyledSlide
         $imgUrl={'/slides/slide-3.jpg'}
-        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+        className="absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-black-rgba before:bg-opacity-40 lg:h-[800px]"
       >
-        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:gap-y-5 lg:text-3xl">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -109,9 +109,9 @@ export default function SliderMain() {
       </StyledSlide>
       <StyledSlide
         $imgUrl={'/slides/slide-4.jpg'}
-        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+        className="absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-black-rgba before:bg-opacity-40 lg:h-[800px]"
       >
-        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:gap-y-5 lg:text-3xl">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -137,9 +137,9 @@ export default function SliderMain() {
       </StyledSlide>
       <StyledSlide
         $imgUrl={'/slides/slide-3.jpg'}
-        className="before:bg-black-rgba absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-opacity-40 lg:h-[800px]"
+        className="absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-black-rgba before:bg-opacity-40 lg:h-[800px]"
       >
-        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:text-3xl">
+        <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:gap-y-5 lg:text-3xl">
           <h2>We provide Effective Plumbing Solution</h2>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
