@@ -76,3 +76,51 @@ export const slidesProjects = [
     imageUrl: '/public/images/image1.jpg',
   },
 ];
+
+export const slidesBanner = [
+  {
+    url: '/slides/slide-1.jpg',
+    heading: 'We provide Effective Plumbing Solution',
+    subheading:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
+      'consectetur debitis deleniti dolores error est facere fuga incidunt,\n' +
+      'laboriosam magnam necessitatibus, officia optio perferendis quia\n' +
+      'quisquam reiciendis reprehenderit similique voluptas.',
+  },
+  {
+    url: '/slides/slide-2.jpg',
+    heading: 'We provide Effective Plumbing Solution 2',
+    subheading:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
+      'consectetur debitis deleniti dolores error est facere fuga incidunt,\n' +
+      'laboriosam magnam necessitatibus, officia optio perferendis quia\n' +
+      'quisquam reiciendis reprehenderit similique voluptas.',
+  },
+  {
+    url: '/slides/slide-3.jpg',
+    heading: 'We provide Effective Plumbing Solution 3',
+    subheading:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
+      'consectetur debitis deleniti dolores error est facere fuga incidunt,\n' +
+      'laboriosam magnam necessitatibus, officia optio perferendis quia\n' +
+      'quisquam reiciendis reprehenderit similique voluptas.',
+  },
+  {
+    url: '/slides/slide-4.jpg',
+    heading: 'We provide Effective Plumbing Solution 4',
+    subheading:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
+      'consectetur debitis deleniti dolores error est facere fuga incidunt,\n' +
+      'laboriosam magnam necessitatibus, officia optio perferendis quia\n' +
+      'quisquam reiciendis reprehenderit similique voluptas.',
+  },
+  {
+    url: '/slides/slide-1.jpg',
+    heading: 'We provide Effective Plumbing Solution 5',
+    subheading:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
+      'consectetur debitis deleniti dolores error est facere fuga incidunt,\n' +
+      'laboriosam magnam necessitatibus, officia optio perferendis quia\n' +
+      'quisquam reiciendis reprehenderit similique voluptas.',
+  },
+];
