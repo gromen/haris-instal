@@ -12,8 +12,6 @@ import Projects from '@/app/components/Projects/Projects';
 import Footer from '@/app/components/Footer/Footer';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 export default function Home() {
   config.autoAddCss = false;

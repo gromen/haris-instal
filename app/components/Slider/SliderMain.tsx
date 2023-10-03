@@ -1,10 +1,11 @@
 'use client';
 
 import Slider from 'react-slick';
-
-// import './sliderMain.scss';
 import styled from 'styled-components';
 import { settings } from '@/app/shared/SliderArrows/SliderSettings';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './slider.scss';
 
 const StyledSlide = styled.div<{ $imgUrl: string }>`
   background: url(${({ $imgUrl }) => $imgUrl}) no-repeat;
@@ -12,13 +13,6 @@ const StyledSlide = styled.div<{ $imgUrl: string }>`
   width: 100vh;
   position: relative;
 `;
-
-type ArrowProps = {
-  onClick?: () => void;
-};
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './slider.scss';
 
 export default function SliderMain() {
   return (

@@ -1,4 +1,8 @@
-import { faBath, faToilet, faWrench } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBath,
+  faScrewdriverWrench,
+  faWrench,
+} from '@fortawesome/free-solid-svg-icons';
 
 export const services = [
   {
@@ -9,7 +13,7 @@ export const services = [
   {
     title: 'Drain plumbing',
     body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
-    icon: faToilet,
+    icon: faScrewdriverWrench,
   },
   {
     title: 'Water Line repair',

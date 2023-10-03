@@ -53,6 +53,7 @@ export default function ContactUs() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        title="haris-instal.pl lokalizacja z google maps"
       ></iframe>
     </>
   );
