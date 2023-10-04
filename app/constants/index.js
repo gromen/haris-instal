@@ -79,7 +79,7 @@ export const slidesProjects = [
 
 export const slidesBanner = [
   {
-    url: '/public/slides/slide-1.jpg',
+    url: '/slides/slide-1.jpg',
     heading: 'We provide Effective Plumbing Solution',
     subheading:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
@@ -88,7 +88,7 @@ export const slidesBanner = [
       'quisquam reiciendis reprehenderit similique voluptas.',
   },
   {
-    url: '/public/slides/slide-2.jpg',
+    url: '/slides/slide-2.jpg',
     heading: 'We provide Effective Plumbing Solution 2',
     subheading:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
@@ -97,7 +97,7 @@ export const slidesBanner = [
       'quisquam reiciendis reprehenderit similique voluptas.',
   },
   {
-    url: '/public/slides/slide-3.jpg',
+    url: '/slides/slide-3.jpg',
     heading: 'We provide Effective Plumbing Solution 3',
     subheading:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
@@ -106,7 +106,7 @@ export const slidesBanner = [
       'quisquam reiciendis reprehenderit similique voluptas.',
   },
   {
-    url: '/public/slides/slide-4.jpg',
+    url: '/slides/slide-4.jpg',
     heading: 'We provide Effective Plumbing Solution 4',
     subheading:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
@@ -115,7 +115,7 @@ export const slidesBanner = [
       'quisquam reiciendis reprehenderit similique voluptas.',
   },
   {
-    url: '/public/slides/slide-1.jpg',
+    url: '/slides/slide-1.jpg',
     heading: 'We provide Effective Plumbing Solution 5',
     subheading:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam\n' +
