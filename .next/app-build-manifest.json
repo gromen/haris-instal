@@ -26,13 +26,6 @@
       "static/css/ed2ad5872ac62379.css",
       "static/chunks/app/page-26e45afbc6da27f8.js"
     ],
-    "/o-nas/page": [
-      "static/chunks/webpack-a797dabfca694b46.js",
-      "static/chunks/fd9d1056-4cb06b5251bce77f.js",
-      "static/chunks/864-6e5fba8b549f7968.js",
-      "static/chunks/main-app-203331a3498439fb.js",
-      "static/chunks/app/o-nas/page-5d9ab39361154458.js"
-    ],
     "/kontakt/page": [
       "static/chunks/webpack-a797dabfca694b46.js",
       "static/chunks/fd9d1056-4cb06b5251bce77f.js",
@@ -42,6 +35,13 @@
       "static/chunks/69b09407-5763be80dd441f3b.js",
       "static/chunks/259-591042d6d5c3223e.js",
       "static/chunks/app/kontakt/page-f0500f63509e6d7f.js"
+    ],
+    "/o-nas/page": [
+      "static/chunks/webpack-a797dabfca694b46.js",
+      "static/chunks/fd9d1056-4cb06b5251bce77f.js",
+      "static/chunks/864-6e5fba8b549f7968.js",
+      "static/chunks/main-app-203331a3498439fb.js",
+      "static/chunks/app/o-nas/page-5d9ab39361154458.js"
     ],
     "/projects/project-1/page": [
       "static/chunks/webpack-a797dabfca694b46.js",
