@@ -1,11 +1,11 @@
 {
   "/_not-found": "/_not-found",
-  "/page": "/",
   "/favicon.ico/route": "/favicon.ico",
-  "/kontakt/page": "/kontakt",
+  "/page": "/",
   "/o-nas/page": "/o-nas",
+  "/kontakt/page": "/kontakt",
   "/api/contact/route": "/api/contact",
-  "/projects/project-2/page": "/projects/project-2",
   "/projects/project-1/page": "/projects/project-1",
+  "/projects/project-2/page": "/projects/project-2",
   "/projects/project-3/page": "/projects/project-3"
 }
