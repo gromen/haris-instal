@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-type ServiceProps = {
+export interface ServiceProps {
   title: string;
   body: string;
   icon: IconProp;
-};
+}
 
 export default function Service({ title, body, icon }: ServiceProps) {
   return (
@@ -18,12 +18,6 @@ export default function Service({ title, body, icon }: ServiceProps) {
       </div>
       <h3 className="pb-4 text-2xl font-semibold">{title}</h3>
       <p className="pb-4">{body}</p>
-      {/*<button*/}
-      {/*  className="bg-navy-100 px-4 py-2 text-white hover:bg-primary group-even:bg-white group-even:text-primary"*/}
-      {/*  type="button"*/}
-      {/*>*/}
-      {/*  Czytaj więcej*/}
-      {/*</button>*/}
     </article>
   );
 }
