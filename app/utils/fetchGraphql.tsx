@@ -1,8 +1,8 @@
-export interface QueryGraphql {
+export type QueryGraphql = {
   query: string;
-}
+};
 
-export default async function fetchGraphql(query: QueryGraphql) {
+export default async function fetchGraphql(query: string) {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_WORDPRESS_GRAPHQL_ENDPOINT}`,
