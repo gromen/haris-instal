@@ -87,6 +87,7 @@ export const slidesBanner = [
       'laboriosam magnam necessitatibus, officia optio perferendis quia\n' +
       'quisquam reiciendis reprehenderit similique voluptas.',
   },
+
   {
     url: '/slides/slide-2.jpg',
     heading: 'We provide Effective Plumbing Solution 2',
