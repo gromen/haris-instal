@@ -1,7 +1,3 @@
-export type QueryGraphql = {
-  query: string;
-};
-
 export default async function fetchGraphql(query: string) {
   try {
     const response = await fetch(
