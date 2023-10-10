@@ -5,7 +5,5 @@
   "/kontakt/page": "/kontakt",
   "/o-nas/page": "/o-nas",
   "/api/contact/route": "/api/contact",
-  "/projects/project-1/page": "/projects/project-1",
-  "/projects/project-2/page": "/projects/project-2",
-  "/projects/project-3/page": "/projects/project-3"
+  "/projekty/[slug]/page": "/projekty/[slug]"
 }

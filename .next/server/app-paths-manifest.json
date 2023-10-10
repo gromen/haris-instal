@@ -5,7 +5,5 @@
   "/kontakt/page": "app/kontakt/page.js",
   "/o-nas/page": "app/o-nas/page.js",
   "/api/contact/route": "app/api/contact/route.js",
-  "/projects/project-1/page": "app/projects/project-1/page.js",
-  "/projects/project-2/page": "app/projects/project-2/page.js",
-  "/projects/project-3/page": "app/projects/project-3/page.js"
+  "/projekty/[slug]/page": "app/projekty/[slug]/page.js"
 }
