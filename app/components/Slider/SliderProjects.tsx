@@ -20,24 +20,22 @@ export default function SliderProjects() {
     <Slider {...settingsProjects} className="slider-main">
       {projects?.map((project: Project, index) => (
         <Link
-          href={`projects/project-${++index}`}
-          key={project.node.title}
+          href={`projekty/${project.slug}`}
+          key={project.slug}
           className="group relative before:absolute before:h-full before:w-full before:bg-gradient-to-b before:from-transparent before:to-secondary before:transition-opacity lg:px-2 lg:before:w-[calc(100%-15px)] lg:before:opacity-0 lg:hover:before:opacity-100"
         >
-          {project.node?.featuredImage && (
+          {project?.featuredImage && (
             <Image
-              src={project.node.featuredImage?.node.sourceUrl}
-              alt={'as'}
-              width={330}
-              height={100}
+              src={project.featuredImage?.node.sourceUrl}
+              alt={project.featuredImage.node.altText}
+              height={project.featuredImage.node.mediaDetails?.height ?? 360}
+              width={project.featuredImage.node.mediaDetails?.width || 500}
               loading="lazy"
             />
           )}
 
           <div className="absolute bottom-0 pb-5 pl-5 lg:invisible lg:group-hover:visible">
-            <p className="z-10 font-semibold text-white">
-              {project.node.title}
-            </p>
+            <p className="z-10 font-semibold text-white">{project.title}</p>
           </div>
         </Link>
       ))}

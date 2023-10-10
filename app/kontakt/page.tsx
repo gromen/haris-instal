@@ -12,7 +12,6 @@ import Header from '@/app/components/Header/Header';
 export default function ContactUs() {
   return (
     <>
-      <Header />
       <HeadingHero title="Kontakt" breadcrumb="Kontakt" />
       <div className="container mx-auto mt-10 p-4 lg:mt-20 lg:flex">
         <div className="flex-1 bg-gray-500 px-5 py-10 text-center font-semibold">

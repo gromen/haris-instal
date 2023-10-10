@@ -16,20 +16,32 @@ export const queryAllPosts = `
 export const queryAllProjects = `
   query AllProjects {
     projects {
-      edges {
-        node {
-          id
-          title
-          content
-          excerpt
-          date
-          featuredImage {
-            node{
-              sourceUrl
+      nodes {
+        content
+        id
+        slug
+        title
+        ProductPageFields {
+          projectImage {
+            altText
+            mediaDetails {
+              height
+              width
+            }
+          }
+          projectDescription
+        }
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+            mediaDetails {
+              height
+              width
             }
           }
         }
       }
     }
-}
+  }
 `;
