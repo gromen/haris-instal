@@ -1,25 +1,25 @@
 {
   "pages": {
     "/_not-found": [
-      "static/chunks/webpack-267edcd9e0705622.js",
+      "static/chunks/webpack-df6c156fd68ba686.js",
       "static/chunks/bf6a786c-9071b0a620db162b.js",
       "static/chunks/26-07a74c994f74428b.js",
       "static/chunks/main-app-8825aea532529a32.js",
       "static/chunks/app/_not-found-0a2d80e64a3bc9aa.js"
     ],
     "/layout": [
-      "static/chunks/webpack-267edcd9e0705622.js",
+      "static/chunks/webpack-df6c156fd68ba686.js",
       "static/chunks/bf6a786c-9071b0a620db162b.js",
       "static/chunks/26-07a74c994f74428b.js",
       "static/chunks/main-app-8825aea532529a32.js",
       "static/chunks/870fdd6f-4479c89d5e2c60b9.js",
       "static/chunks/81-7605608b23628b72.js",
       "static/chunks/964-edc4a9946853a916.js",
-      "static/css/56b03717e81b6cb7.css",
-      "static/chunks/app/layout-06d2741d57a3a8c8.js"
+      "static/css/54f615fdd74c4ef5.css",
+      "static/chunks/app/layout-7aa9023863abd964.js"
     ],
     "/page": [
-      "static/chunks/webpack-267edcd9e0705622.js",
+      "static/chunks/webpack-df6c156fd68ba686.js",
       "static/chunks/bf6a786c-9071b0a620db162b.js",
       "static/chunks/26-07a74c994f74428b.js",
       "static/chunks/main-app-8825aea532529a32.js",
@@ -32,7 +32,7 @@
       "static/chunks/app/page-54ac333141651c23.js"
     ],
     "/kontakt/page": [
-      "static/chunks/webpack-267edcd9e0705622.js",
+      "static/chunks/webpack-df6c156fd68ba686.js",
       "static/chunks/bf6a786c-9071b0a620db162b.js",
       "static/chunks/26-07a74c994f74428b.js",
       "static/chunks/main-app-8825aea532529a32.js",
@@ -42,14 +42,14 @@
       "static/chunks/app/kontakt/page-550c1446b5421ade.js"
     ],
     "/o-nas/page": [
-      "static/chunks/webpack-267edcd9e0705622.js",
+      "static/chunks/webpack-df6c156fd68ba686.js",
       "static/chunks/bf6a786c-9071b0a620db162b.js",
       "static/chunks/26-07a74c994f74428b.js",
       "static/chunks/main-app-8825aea532529a32.js",
       "static/chunks/app/o-nas/page-dff3839fcd7c6716.js"
     ],
     "/projekty/[slug]/page": [
-      "static/chunks/webpack-267edcd9e0705622.js",
+      "static/chunks/webpack-df6c156fd68ba686.js",
       "static/chunks/bf6a786c-9071b0a620db162b.js",
       "static/chunks/26-07a74c994f74428b.js",
       "static/chunks/main-app-8825aea532529a32.js",

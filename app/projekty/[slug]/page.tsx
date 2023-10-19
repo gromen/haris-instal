@@ -11,9 +11,6 @@ export default async function Page({
   const project = projects.find((project) => project.slug === slug);
   return (
     <>
-      <Head>
-        <title>{slug} | Haris Instal</title>
-      </Head>
       <div className="mt-lg-20 container mx-auto mt-10 px-4">
         <h1 className="mb-lg-10 mb-5 w-full text-4xl font-bold">
           {project?.title}
