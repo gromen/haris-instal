@@ -9,35 +9,32 @@ export default async function Page({
 }) {
   const projects = await getAllProjects();
   const project = projects.find((project) => project.slug === slug);
-
   return (
     <>
       <Head>
         <title>{slug} | Haris Instal</title>
       </Head>
-      <div className="mt-lg-20 container mx-auto mt-10">
+      <div className="mt-lg-20 container mx-auto mt-10 px-4">
         <h1 className="mb-lg-10 mb-5 w-full text-4xl font-bold">
           {project?.title}
         </h1>
-        <div className="flex gap-10">
-          <div>
+        <div className="flex flex-col gap-5 lg:flex-row lg:gap-10">
+          <div className="lg:w-1/3">
             {project?.featuredImage.node?.sourceUrl && (
-              <Image
-                src={project.featuredImage.node.sourceUrl}
-                alt={project.ProductPageFields.projectImage.altText}
-                height={
-                  project.ProductPageFields.projectImage.mediaDetails.height
-                }
-                width={
-                  project.ProductPageFields.projectImage.mediaDetails.width
-                }
-              />
+              <>
+                <Image
+                  src={project.featuredImage.node.sourceUrl}
+                  alt={project.featuredImage.node?.altText}
+                  height={project.featuredImage.node?.mediaDetails?.height}
+                  width={project.featuredImage.node?.mediaDetails?.width}
+                />
+              </>
             )}
           </div>
-          <div>
-            <p
+          <div className="lg:w-2/3">
+            <div
               dangerouslySetInnerHTML={{
-                __html: String(project?.ProductPageFields?.projectDescription),
+                __html: String(project?.ProductPageFields.projectDescription),
               }}
             />
           </div>
