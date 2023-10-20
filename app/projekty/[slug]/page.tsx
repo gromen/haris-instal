@@ -1,6 +1,21 @@
 import getAllProjects, { Project } from '@/app/services/getAllProjects';
-import Head from 'next/head';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = params.slug;
+  const projects = await getAllProjects();
+  const project = projects.find((project) => project.slug === slug);
+
+  return {
+    title: `${project?.title} | Haris Instal`,
+    description: ' ',
+  };
+}
 
 export default async function Page({
   params: { slug },
