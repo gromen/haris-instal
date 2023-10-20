@@ -18,10 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl">
-      <body className={openSans.className}>
+    <html lang="pl" className="relative">
+      <body className={clsx([openSans.className, 'min-h-screen'])}>
         <Header />
-        <main className="min-h-full">{children}</main>
+        <main className="pb-40">{children}</main>
         <Footer />
       </body>
     </html>
