@@ -1,9 +1,0 @@
-{
-  "/_not-found": "/_not-found",
-  "/favicon.ico/route": "/favicon.ico",
-  "/page": "/",
-  "/kontakt/page": "/kontakt",
-  "/o-nas/page": "/o-nas",
-  "/api/contact/route": "/api/contact",
-  "/projekty/[slug]/page": "/projekty/[slug]"
-}
