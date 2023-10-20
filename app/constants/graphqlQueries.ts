@@ -24,12 +24,12 @@ export const queryAllProjects = `
         ProductPageFields {
           projectImage {
             altText
+            mediaItemUrl
             mediaDetails {
               height
               width
             }
           }
-          projectDescription
         }
         featuredImage {
           node {

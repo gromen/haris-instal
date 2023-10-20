@@ -21,7 +21,7 @@ export default function HeaderNavigation() {
   ]);
   const classesHamburger = clsx([
     'flex md:hidden',
-    { 'absolute right-10 top-10 z-50': opened },
+    { 'absolute right-5 top-5 z-50': opened },
   ]);
   const navItems = navigationItems.map((item) => (
     <HeaderNavigationItem

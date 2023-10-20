@@ -12,9 +12,14 @@ const config: Config = {
         '0%': { transform: 'translatey(-50%)', opacity: '0' },
         '100%': { transform: 'translatey(0%)', opacity: '1' },
       },
+      spin: {
+        '0%': { transform: 'rotate(0deg)' },
+        '100%': { transform: 'rotate(360deg)' },
+      },
     },
     animation: {
       show: 'show .2s linear',
+      spin: 'spin 1.2s linear infinite',
     },
     transitionProperty: {
       height: 'height',

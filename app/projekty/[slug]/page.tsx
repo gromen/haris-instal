@@ -9,6 +9,7 @@ export default async function Page({
 }) {
   const projects = await getAllProjects();
   const project = projects.find((project) => project.slug === slug);
+
   return (
     <>
       <div className="mt-lg-20 container mx-auto mt-10 px-4">
@@ -31,7 +32,7 @@ export default async function Page({
           <div className="lg:w-2/3">
             <div
               dangerouslySetInnerHTML={{
-                __html: String(project?.ProductPageFields.projectDescription),
+                __html: String(project?.content),
               }}
             />
           </div>

@@ -1,7 +1,7 @@
 import fetchGraphql from '@/app/utils/fetchGraphql';
 import { queryAllProjects } from '@/app/constants/graphqlQueries';
 
-export interface Project {
+export type Project = {
   id: string;
   title: string;
   content: string;
@@ -17,7 +17,6 @@ export interface Project {
         width: number;
       };
     };
-    projectDescription: string;
   };
   featuredImage: {
     node: {
@@ -29,7 +28,7 @@ export interface Project {
       };
     };
   };
-}
+};
 
 export default async function getAllProjects(): Promise<Project[]> {
   const { data } = await fetchGraphql(queryAllProjects);
