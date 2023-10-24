@@ -17,10 +17,16 @@ export default function SliderProjects() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    getAllProjects()
-      .then((projects) => setProjects(projects))
-      .finally(() => setLoading(false));
+    const cachedProjects = localStorage.getItem('projects');
+
+    async function fetchProjects() {
+      setLoading(true);
+      const projects = await getAllProjects();
+      setProjects(projects);
+      localStorage.setItem('projects', JSON.stringify(projects));
+      setLoading(false);
+    }
+    fetchProjects();
   }, []);
 
   return (
@@ -35,7 +41,7 @@ export default function SliderProjects() {
         </div>
       ) : (
         <Slider {...settingsProjects} className="slider-main">
-          {projects.map((project: Project, index) => (
+          {projects.map((project: Project) => (
             <Link
               href={`projekty/${project.slug}`}
               key={project.slug}

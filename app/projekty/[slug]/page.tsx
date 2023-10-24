@@ -1,6 +1,7 @@
-import getAllProjects, { Project } from '@/app/services/getAllProjects';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import fetchGraphql from '@/app/utils/fetchGraphql';
+import { getProjectBySlug } from '@/app/constants/graphqlQueries';
 
 type Props = {
   params: { slug: string };
@@ -8,8 +9,8 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = params.slug;
-  const projects = await getAllProjects();
-  const project = projects.find((project) => project.slug === slug);
+  const result = await fetchGraphql(getProjectBySlug, { slug });
+  const project = result.data.projectBy;
 
   return {
     title: `${project?.title} | Haris Instal`,
@@ -22,8 +23,8 @@ export default async function Page({
 }: {
   params: { slug: string };
 }) {
-  const projects = await getAllProjects();
-  const project = projects.find((project) => project.slug === slug);
+  const result = await fetchGraphql(getProjectBySlug, { slug });
+  const project = result.data.projectBy;
 
   return (
     <>
@@ -33,13 +34,13 @@ export default async function Page({
         </h1>
         <div className="flex flex-col gap-5 lg:flex-row lg:gap-10">
           <div className="lg:w-1/3">
-            {project?.featuredImage.node?.sourceUrl && (
+            {project?.featuredImage?.node.sourceUrl && (
               <>
                 <Image
-                  src={project.featuredImage.node.sourceUrl}
-                  alt={project.featuredImage.node?.altText}
-                  height={project.featuredImage.node?.mediaDetails?.height}
-                  width={project.featuredImage.node?.mediaDetails?.width}
+                  src={project.featuredImage?.node.sourceUrl}
+                  alt={project.featuredImage?.node.altText}
+                  height={project.featuredImage?.node.mediaDetails?.height}
+                  width={project.featuredImage?.node.mediaDetails?.width}
                 />
               </>
             )}

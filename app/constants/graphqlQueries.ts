@@ -45,3 +45,21 @@ export const queryAllProjects = `
     }
   }
 `;
+export const getProjectBySlug = `
+  query GetProjectBySlug($slug: String!) {
+    projectBy(slug: $slug) {
+      title
+      content
+      featuredImage {
+        node {
+          sourceUrl
+          altText
+          mediaDetails {
+            height
+            width
+          }
+        }
+      }
+    }
+  }
+`;
