@@ -3,7 +3,7 @@ export class EventBus {
 
   on(event: string, fn: Function) {
     if (typeof fn !== 'function') {
-      console.error('_EventsBus.on callback not function!');
+      console.error('_EventsBus.on callback not a function!');
       return;
     }
 
