@@ -6,7 +6,7 @@ export default async function fetchGraphql(query: string, variables?: any) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query, variables }),
-        next: { revalidate: 60 },
+        next: { tags: ['all-projects'], revalidate: 3600 },
       }
     );
     return await response.json();

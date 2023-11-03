@@ -8,7 +8,7 @@ import { clsx } from 'clsx';
 const openSans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Haris-instal',
+  title: 'Home | Haris-instal',
   description: 'Usługi hydrauliczne',
 };
 

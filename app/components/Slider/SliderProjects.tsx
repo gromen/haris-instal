@@ -17,16 +17,29 @@ export default function SliderProjects() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const cachedProjects = localStorage.getItem('projects');
+    const projectRevalidate = setInterval(() => {
+      localStorage.removeItem('projects');
+      fetchProjects();
+    }, 300000); // every 5 minutes interval
 
     async function fetchProjects() {
+      const projectsCached = localStorage.getItem('projects');
+      if (projectsCached) {
+        setProjects(JSON.parse(projectsCached));
+        return;
+      }
       setLoading(true);
       const projects = await getAllProjects();
-      setProjects(projects);
       localStorage.setItem('projects', JSON.stringify(projects));
+      setProjects(projects);
       setLoading(false);
     }
+
     fetchProjects();
+
+    return () => {
+      clearInterval(projectRevalidate);
+    };
   }, []);
 
   return (
