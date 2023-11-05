@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image';
 import logo from '@/public/images/haris-instal_logo.png';
 import HeaderNavigationItem from '@/app/components/Header/HeaderNavigation/HeaderNavigationItem';
 import { useEffect, useState } from 'react';
@@ -9,13 +8,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import useWindowSize from '@/app/hooks/useWindowSize';
 import { navigationItems } from '@/app/constants';
+import ExportedImage from 'next-image-export-optimizer';
 
 export default function HeaderNavigation() {
   const [isMobile] = useWindowSize();
   const [opened, setOpened] = useState<boolean>(false);
   const onClickHamburger = () => setOpened((prevState) => !prevState);
   const classesUl = clsx([
-    'md:gap-4 w-full h-full text-center transition-opacity text-4xl md:text-lg top-0 space-y-6 md:space-y-0 font-bold flex flex-col items-center justify-center md:w-auto md:text-left absolute md:static md:flex-row left-0 bg-white',
+    'md:gap-4 w-full max-[767px]:h-screen text-center transition-opacity text-4xl md:text-lg top-0 space-y-6 md:space-y-0 font-bold flex flex-col items-center justify-center md:w-auto md:text-left absolute md:static md:flex-row left-0 bg-white',
     { 'opacity-100 z-20': opened && isMobile },
     { 'mt-0 opacity-0 -z-10': !opened && isMobile },
   ]);
@@ -41,7 +41,12 @@ export default function HeaderNavigation() {
   return (
     <nav className="flex w-full flex-wrap justify-between self-center p-4 md:self-start">
       <Link href="/" className="flex md:collapse md:hidden">
-        <Image src={logo} alt="main logo image" width={100} height={60} />
+        <ExportedImage
+          src={logo}
+          alt="main logo image"
+          width={100}
+          height={60}
+        />
       </Link>
       <button className={classesHamburger} onClick={onClickHamburger}>
         <FontAwesomeIcon

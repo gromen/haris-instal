@@ -11,9 +11,9 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image';
 import { useState } from 'react';
 import { slides } from '@/app/constants';
+import ExportedImage from 'next-image-export-optimizer';
 
 type ArrowProps = {
   onClick?: () => void;
@@ -87,7 +87,7 @@ export default function SliderTrustedPartner() {
   return (
     <Slider {...settings} className="slider-main">
       {slides.map((slide) => (
-        <Image
+        <ExportedImage
           key={slide.id}
           src={slide.url}
           alt={slide.alt}

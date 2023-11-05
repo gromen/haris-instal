@@ -1,7 +1,8 @@
-import Image from 'next/image';
 import { Metadata } from 'next';
 import fetchGraphql from '@/app/utils/fetchGraphql';
 import { getProjectBySlug } from '@/app/constants/graphqlQueries';
+import getAllProjects from '@/app/services/getAllProjects';
+import ExportedImage from 'next-image-export-optimizer';
 
 type Props = {
   params: { slug: string };
@@ -18,11 +19,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function Page({
-  params: { slug },
-}: {
-  params: { slug: string };
-}) {
+export async function generateStaticParams() {
+  const result = await getAllProjects();
+
+  return result.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export default async function Page({ params: { slug } }: Props) {
   const result = await fetchGraphql(getProjectBySlug, { slug });
   const project = result.data.projectBy;
 
@@ -36,7 +41,7 @@ export default async function Page({
           <div className="lg:w-1/3">
             {project?.featuredImage?.node.sourceUrl && (
               <>
-                <Image
+                <ExportedImage
                   src={project.featuredImage?.node.sourceUrl}
                   alt={project.featuredImage?.node.altText}
                   height={project.featuredImage?.node.mediaDetails?.height}

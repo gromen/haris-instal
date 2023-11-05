@@ -62,13 +62,13 @@ export default function HeaderContactInfo() {
           </div>
         </li>
       </ul>
-      <button
+      {/* <button
         type="button"
         className="transition-colors mr-4 w-1/6 bg-navy-800 p-4 text-white hover:bg-navy-100"
         onClick={onClickButton}
       >
         Zapytaj
-      </button>
+      </button> */}
     </address>
   );
 }

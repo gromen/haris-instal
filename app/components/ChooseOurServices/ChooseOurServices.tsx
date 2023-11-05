@@ -1,7 +1,7 @@
 import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import image from '@/public/images/image1.jpg';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 export default function ChooseOurServices() {
   return (
@@ -35,7 +35,7 @@ export default function ChooseOurServices() {
           </div>
         </div>
         <div className="lg:w-2/3">
-          <Image
+          <ExportedImage
             className="ml-auto"
             src={image}
             alt="bg"

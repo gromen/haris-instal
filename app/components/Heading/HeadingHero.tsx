@@ -9,7 +9,7 @@ type HeadingHeroProps = {
 };
 
 const StyledHeading = styled.section`
-  background-image: url('/slides/slide-5.jpg');
+  background-image: url('/images/slide-5.jpg');
   background-size: cover;
   width: 100%;
 `;

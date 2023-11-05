@@ -3,6 +3,7 @@ import Image from 'next/image';
 import useWindowSize from '@/app/hooks/useWindowSize';
 import { Fragment } from 'react';
 import SliderTrustedPartner from '@/app/components/Slider/SliderTrustedPartner';
+import ExportedImage from 'next-image-export-optimizer';
 
 export default function TrustedPartner() {
   const [isMobile] = useWindowSize();
@@ -11,25 +12,25 @@ export default function TrustedPartner() {
     <SliderTrustedPartner />
   ) : (
     <Fragment>
-      <Image
+      <ExportedImage
         src="/images/logo-trusted-partner-1.svg"
         alt="logo trusted partner"
         width="150"
         height="50"
       />
-      <Image
+      <ExportedImage
         src="/images/logo-trusted-partner-1.svg"
         alt="logo trusted partner"
         width="150"
         height="50"
       />
-      <Image
+      <ExportedImage
         src="/images/logo-trusted-partner-1.svg"
         alt="logo trusted partner"
         width="150"
         height="50"
       />
-      <Image
+      <ExportedImage
         src="/images/logo-trusted-partner-1.svg"
         alt="logo trusted partner"
         width="150"
