@@ -26,7 +26,8 @@ export const navigationItems = [
   { title: 'Home', href: '/', label: 'Home page', classes: 'md:pr-6' },
   { title: 'O nas', href: '/o-nas', label: 'O nas', classes: 'md:pr-6' },
   { title: 'Kontakt', href: '/kontakt', label: 'Kontakt', classes: '' },
-];
+] as const;
+
 export const slides = [
   {
     id: 'slide-1',
@@ -125,3 +126,5 @@ export const slidesBanner = [
       'quisquam reiciendis reprehenderit similique voluptas.',
   },
 ];
+
+export const headerHeight = 140;

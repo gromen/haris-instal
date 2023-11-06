@@ -7,7 +7,7 @@ import { clsx } from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import useWindowSize from '@/app/hooks/useWindowSize';
-import { navigationItems } from '@/app/constants';
+import { navigationItems } from '@/app/constants/index';
 import ExportedImage from 'next-image-export-optimizer';
 
 export default function HeaderNavigation() {
@@ -15,10 +15,11 @@ export default function HeaderNavigation() {
   const [opened, setOpened] = useState<boolean>(false);
   const onClickHamburger = () => setOpened((prevState) => !prevState);
   const classesUl = clsx([
-    'md:gap-4 w-full max-[767px]:h-screen text-center transition-opacity text-4xl md:text-lg top-0 space-y-6 md:space-y-0 font-bold flex flex-col items-center justify-center md:w-auto md:text-left absolute md:static md:flex-row left-0 bg-white',
+    'md:gap-4 w-full bg-white max-[767px]:h-screen text-center transition-opacity text-4xl md:text-lg top-0 space-y-6 md:space-y-0 font-bold flex flex-col items-center justify-center md:w-auto md:text-left absolute md:static md:flex-row left-0',
     { 'opacity-100 z-20': opened && isMobile },
     { 'mt-0 opacity-0 -z-10': !opened && isMobile },
   ]);
+
   const classesHamburger = clsx([
     'flex md:hidden',
     { 'absolute right-5 top-5 z-50': opened },
