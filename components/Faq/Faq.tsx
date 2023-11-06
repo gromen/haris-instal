@@ -1,5 +1,5 @@
-import AccordionList from '@/app/components/AccordionList/AccordionList';
-import Heading from '@/app/components/Heading/Heading';
+import AccordionList from '@/components/AccordionList/AccordionList';
+import Heading from '@/components/Heading/Heading';
 
 export default function Faq() {
   return (

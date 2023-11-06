@@ -1,6 +1,6 @@
 'use client';
-import Heading from '@/app/components/Heading/Heading';
-import SliderProjects from '@/app/components/Slider/SliderProjects';
+import Heading from '@/components/Heading/Heading';
+import SliderProjects from '@/components/Slider/SliderProjects';
 
 export default function Projects() {
   return (

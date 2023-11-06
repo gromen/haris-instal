@@ -1,13 +1,13 @@
 'use client';
 
-import HeadingHero from '@/app/components/Heading/HeadingHero';
+import HeadingHero from '@/components/Heading/HeadingHero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faMapLocationDot,
   faPhoneVolume,
   faComments,
 } from '@fortawesome/free-solid-svg-icons';
-import Header from '@/app/components/Header/Header';
+import Header from '@/components/Header/Header';
 
 export default function ContactUs() {
   return (

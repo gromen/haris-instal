@@ -1,10 +1,10 @@
 'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import Contact from '@/app/components/Contact/Contact';
+import Contact from '@/components/Contact/Contact';
 import { eventBus } from '@/app/utils/event-bus';
 import { useEffect, useRef, useState } from 'react';
-import Alert, { AlertProps } from '@/app/components/Alert/Alert';
+import Alert, { AlertProps } from '@/components/Alert/Alert';
 
 interface AlertComponent {
   scrollToView: () => void;

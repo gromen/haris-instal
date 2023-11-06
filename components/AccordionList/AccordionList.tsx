@@ -1,6 +1,6 @@
 'use client';
 
-import AccordionListItem from '@/app/components/AccordionList/AccordionListItem';
+import AccordionListItem from '@/components/AccordionList/AccordionListItem';
 import { useState } from 'react';
 
 const accordionItems = [

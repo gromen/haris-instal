@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import useWindowSize from '@/app/hooks/useWindowSize';
 import { Fragment } from 'react';
-import SliderTrustedPartner from '@/app/components/Slider/SliderTrustedPartner';
+import SliderTrustedPartner from '@/components/Slider/SliderTrustedPartner';
 import ExportedImage from 'next-image-export-optimizer';
 
 export default function TrustedPartner() {

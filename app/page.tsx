@@ -1,13 +1,13 @@
 'use client';
 import { config } from '@fortawesome/fontawesome-svg-core';
 
-import HeroBanner from '@/app/components/HeroBanner/HeroBanner';
-import TrustedPartner from '@/app/components/TrustedPartner/TrustedPartner';
-import OurServices from '@/app/components/OurServices/OurServices';
+import HeroBanner from '@/components/HeroBanner/HeroBanner';
+import TrustedPartner from '@/components/TrustedPartner/TrustedPartner';
+import OurServices from '@/components/OurServices/OurServices';
 // import UrgentContact from '@/app/components/UrgentContact/UrgentContact';
-import ChooseOurServices from '@/app/components/ChooseOurServices/ChooseOurServices';
-import TotalStatistics from '@/app/components/TotalStatistics/TotalStatistics';
-import Faq from '@/app/components/Faq/Faq';
+import ChooseOurServices from '@/components/ChooseOurServices/ChooseOurServices';
+import TotalStatistics from '@/components/TotalStatistics/TotalStatistics';
+import Faq from '@/components/Faq/Faq';
 // import Projects from '@/app/components/Projects/Projects';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';

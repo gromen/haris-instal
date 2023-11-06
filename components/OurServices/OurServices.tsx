@@ -1,6 +1,6 @@
-import Service from '@/app/components/OurServices/Service';
+import Service from '@/components/OurServices/Service';
 import { services } from '@/app/constants';
-import Heading from '@/app/components/Heading/Heading';
+import Heading from '@/components/Heading/Heading';
 
 export default function OurServices() {
   return (

@@ -6,9 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './slider.scss';
 import { slidesBanner } from '@/app/constants';
-import SlideBanner, {
-  SlideBannerProps,
-} from '@/app/components/Slider/SlideBanner';
+import SlideBanner, { SlideBannerProps } from '@/components/Slider/SlideBanner';
 
 export default function SliderMain() {
   return (

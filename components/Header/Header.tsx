@@ -1,7 +1,7 @@
-import HeaderTop from '@/app/components/Header/HeaderTop';
-import HeaderNavigation from '@/app/components/Header/HeaderNavigation';
-import HeaderContactInfo from '@/app/components/Header/HeaderContactInfo';
-import Logo from '@/app/components/Header/Logo';
+import HeaderTop from '@/components/Header/HeaderTop';
+import HeaderNavigation from '@/components/Header/HeaderNavigation';
+import HeaderContactInfo from '@/components/Header/HeaderContactInfo';
+import Logo from '@/components/Header/Logo';
 
 export default function Header() {
   return (

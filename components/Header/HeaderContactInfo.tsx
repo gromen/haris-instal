@@ -48,7 +48,7 @@ export default function HeaderContactInfo() {
             </Link>
           </div>
         </li>
-        <li className="flex items-center p-4 md:flex-1">
+        <li className="flex items-center p-4">
           <div className="mr-4 flex h-9 w-9 items-center justify-center rounded-full bg-gray-400 ring-2 ring-gray-500">
             <FontAwesomeIcon
               icon={faLocationDot}

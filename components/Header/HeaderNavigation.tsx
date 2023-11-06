@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import logo from '@/public/images/haris-instal_logo.png';
-import HeaderNavigationItem from '@/app/components/Header/HeaderNavigation/HeaderNavigationItem';
+import HeaderNavigationItem from '@/components/Header/HeaderNavigation/HeaderNavigationItem';
 import { useEffect, useState } from 'react';
 import { clsx } from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
