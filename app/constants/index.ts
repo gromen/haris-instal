@@ -126,5 +126,3 @@ export const slidesBanner = [
       'quisquam reiciendis reprehenderit similique voluptas.',
   },
 ];
-
-export const headerHeight = 140;

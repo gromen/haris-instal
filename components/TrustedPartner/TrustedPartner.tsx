@@ -10,7 +10,7 @@ export default function TrustedPartner() {
   const images = isMobile ? (
     <SliderTrustedPartner />
   ) : (
-    <Fragment>
+    <>
       <Image
         src="/images/logo-trusted-partner-1.svg"
         alt="logo trusted partner"
@@ -35,7 +35,7 @@ export default function TrustedPartner() {
         width="150"
         height="50"
       />
-    </Fragment>
+    </>
   );
 
   return (

@@ -4,7 +4,6 @@ import { Open_Sans } from 'next/font/google';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import { clsx } from 'clsx';
-import { headerHeight } from './constants';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 
@@ -22,7 +21,7 @@ export default function RootLayout({
     <html lang="pl" className="relative">
       <body className={clsx([openSans.className, 'min-h-screen'])}>
         <Header />
-        <main className={`pb-40 pt-[${headerHeight}px]`}>{children}</main>
+        <main className="pb-40 pt-20 md:pt-[140px]">{children}</main>
         <Footer />
       </body>
     </html>

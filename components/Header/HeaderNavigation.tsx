@@ -15,8 +15,8 @@ export default function HeaderNavigation() {
   const [opened, setOpened] = useState<boolean>(false);
   const onClickHamburger = () => setOpened((prevState) => !prevState);
   const classesUl = clsx([
-    'md:gap-4 w-full bg-white max-[767px]:h-screen text-center transition-opacity text-4xl md:text-lg top-0 space-y-6 md:space-y-0 font-bold flex flex-col items-center justify-center md:w-auto md:text-left absolute md:static md:flex-row left-0',
-    { 'opacity-100 z-20': opened && isMobile },
+    'md:gap-4 w-full max-[767px]:h-screen text-center transition-opacity text-4xl md:text-lg top-0 space-y-6 md:space-y-0 font-bold flex flex-col items-center justify-center md:w-auto md:text-left absolute md:static md:flex-row left-0',
+    { 'opacity-100 z-20 bg-white': opened && isMobile },
     { 'mt-0 opacity-0 -z-10': !opened && isMobile },
   ]);
 

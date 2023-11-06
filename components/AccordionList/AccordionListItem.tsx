@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { clsx } from 'clsx';
+import { motion } from 'framer-motion';
 
 type AccordionListItemProps = {
   title: string;
@@ -45,7 +46,13 @@ export default function AccordionListItem({
   );
 
   return (
-    <li className={classesLi} onClick={() => onClick(itemId)}>
+    <motion.li
+      className={classesLi}
+      onClick={() => onClick(itemId)}
+      initial={{ left: 100, opacity: 0 }}
+      animate={{ left: 0, opacity: 1 }}
+      transition={{ delay: 0.1 * Number(accordionItemIndex), duration: 0.4 }}
+    >
       <button
         type="button"
         aria-expanded={isOpen}
@@ -58,6 +65,6 @@ export default function AccordionListItem({
       <p id={accessibleId} className={classesContent} {...attributesContent}>
         {content}
       </p>
-    </li>
+    </motion.li>
   );
 }

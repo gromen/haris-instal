@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function ChooseOurServices() {
   return (
     <section className="container mx-auto p-4 lg:p-24">
-      <div className=" lg:flex lg:gap-5">
+      <div className="lg:flex lg:gap-5">
         <div className="lg:w-1/3">
           <p className="pb-2 text-sm font-semibold text-primary">
             <FontAwesomeIcon className="pr-2" icon={faScrewdriverWrench} />

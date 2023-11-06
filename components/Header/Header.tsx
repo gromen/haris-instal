@@ -3,36 +3,12 @@
 import HeaderNavigation from '@/components/Header/HeaderNavigation';
 import HeaderContactInfo from '@/components/Header/HeaderContactInfo';
 import Logo from '@/components/Header/Logo';
-import { useEffect, useState } from 'react';
-import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
 export default function Header() {
-  const [isHeaderFixed, setIsHeaderFixed] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsHeaderFixed(true);
-    } else {
-      setIsHeaderFixed(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    handleScroll();
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <motion.header
-      className={clsx([
-        { 'fixed bg-opacity-80': isHeaderFixed },
-        'z-[999] w-full bg-white',
-      ])}
+      className="fixed z-[999] w-full bg-white bg-opacity-80 backdrop-blur-sm"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
     >
