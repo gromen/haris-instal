@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 import getAllProjects, { Project } from '@/app/services/getAllProjects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import ExportedImage from 'next-image-export-optimizer';
+import Image from 'next/image';
 
 export default function SliderProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -61,7 +61,7 @@ export default function SliderProjects() {
               className="group relative before:absolute before:h-full before:w-full before:bg-gradient-to-b before:from-transparent before:to-secondary before:transition-opacity lg:px-2 lg:before:w-[calc(100%-15px)] lg:before:opacity-0 lg:hover:before:opacity-100"
             >
               {project?.featuredImage && (
-                <ExportedImage
+                <Image
                   src={project.featuredImage?.node.sourceUrl}
                   alt={project.featuredImage.node.altText}
                   height={

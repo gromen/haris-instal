@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import fetchGraphql from '@/app/utils/fetchGraphql';
 import { getProjectBySlug } from '@/app/constants/graphqlQueries';
 import getAllProjects from '@/app/services/getAllProjects';
-import ExportedImage from 'next-image-export-optimizer';
+import Image from 'next/image';
 
 type Props = {
   params: { slug: string };
@@ -41,7 +41,7 @@ export default async function Page({ params: { slug } }: Props) {
           <div className="lg:w-1/3">
             {project?.featuredImage?.node.sourceUrl && (
               <>
-                <ExportedImage
+                <Image
                   src={project.featuredImage?.node.sourceUrl}
                   alt={project.featuredImage?.node.altText}
                   height={project.featuredImage?.node.mediaDetails?.height}

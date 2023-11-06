@@ -1,11 +1,11 @@
 import logo from '@/public/images/haris-instal_logo.png';
 import Link from 'next/link';
-import ExportedImage from 'next-image-export-optimizer';
+import Image from 'next/image';
 
 export default function Logo() {
   return (
     <Link className="flex items-center" href="/">
-      <ExportedImage
+      <Image
         src={logo}
         alt="haris instal logo obrazek"
         width={300}

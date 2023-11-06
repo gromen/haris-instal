@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import useWindowSize from '@/app/hooks/useWindowSize';
 import { navigationItems } from '@/app/constants/index';
-import ExportedImage from 'next-image-export-optimizer';
+import Image from 'next/image';
 
 export default function HeaderNavigation() {
   const [isMobile] = useWindowSize();
@@ -42,12 +42,7 @@ export default function HeaderNavigation() {
   return (
     <nav className="flex w-full flex-wrap justify-between self-center p-4 md:self-start">
       <Link href="/" className="flex md:collapse md:hidden">
-        <ExportedImage
-          src={logo}
-          alt="main logo image"
-          width={100}
-          height={60}
-        />
+        <Image src={logo} alt="main logo image" width={100} height={60} />
       </Link>
       <button className={classesHamburger} onClick={onClickHamburger}>
         <FontAwesomeIcon

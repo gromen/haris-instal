@@ -13,7 +13,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { slides } from '@/app/constants';
-import ExportedImage from 'next-image-export-optimizer';
+import Image from 'next/image';
 
 type ArrowProps = {
   onClick?: () => void;
@@ -87,7 +87,7 @@ export default function SliderTrustedPartner() {
   return (
     <Slider {...settings} className="slider-main">
       {slides.map((slide) => (
-        <ExportedImage
+        <Image
           key={slide.id}
           src={slide.url}
           alt={slide.alt}
