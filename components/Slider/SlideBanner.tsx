@@ -1,11 +1,4 @@
-import styled from 'styled-components';
-
-const StyledSlide = styled.div<{ $imgUrl: string }>`
-  background: url(${({ $imgUrl }) => $imgUrl}) no-repeat;
-  background-size: cover;
-  width: 100%;
-  position: relative;
-`;
+import Image from 'next/image';
 
 export interface SlideBannerProps {
   url: string;
@@ -19,11 +12,16 @@ export default function SlideBanner({
   subheading,
 }: SlideBannerProps) {
   return (
-    <StyledSlide
-      $imgUrl={url}
-      className="absolute mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-black-rgba before:bg-opacity-40 lg:h-[800px]"
-    >
-      <div className="container z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:gap-y-5 lg:text-3xl">
+    <div className="mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-black-rgba before:bg-opacity-40 lg:h-[800px]">
+      <Image
+        src={url}
+        alt="main banner slide"
+        width="1920"
+        height="400"
+        loading="eager"
+        priority={true}
+      />
+      <div className="container absolute z-10 flex flex-col gap-y-3 px-4 md:text-lg lg:gap-y-5 lg:text-3xl">
         <h2 className="font-bold">{heading}</h2>
         <small>{subheading}</small>
         <div className="flex">
@@ -35,6 +33,6 @@ export default function SlideBanner({
           </button>
         </div>
       </div>
-    </StyledSlide>
+    </div>
   );
 }
