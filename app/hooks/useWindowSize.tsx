@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 export default function useWindowSize() {
   const [width, setWidth] = useState(0);
 
-  const isMobile = width < 769;
+  const isMobile = width < 1024;
   useEffect(() => {
     function handleResize() {
-      setWidth(window.outerWidth);
+      setWidth(window.innerWidth);
     }
     handleResize();
     window.addEventListener('resize', handleResize);

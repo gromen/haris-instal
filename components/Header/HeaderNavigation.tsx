@@ -11,11 +11,12 @@ import { navigationItems } from '@/app/constants/index';
 import Image from 'next/image';
 
 export default function HeaderNavigation() {
-  const [isMobile] = useWindowSize();
+  const [isMobile, width] = useWindowSize();
   const [opened, setOpened] = useState<boolean>(false);
   const onClickHamburger = () => setOpened((prevState) => !prevState);
+  console.log({ isMobile, opened, width });
   const classesUl = clsx([
-    'md:gap-4 w-full max-[767px]:h-screen text-center text-4xl md:text-lg top-0 space-y-6 md:space-y-0 font-bold md:flex  md:w-auto md:text-left absolute md:static md:flex-row left-0',
+    'lg:gap-6 w-full max-[1023px]:h-screen text-center text-4xl lg:text-lg top-0 space-y-6 lg:space-y-0 font-bold lg:flex  lg:w-auto lg:text-left absolute lg:static lg:flex-row left-0',
     {
       'bg-white flex flex-col items-center justify-center bg-opacity-90':
         opened && isMobile,
@@ -23,7 +24,7 @@ export default function HeaderNavigation() {
     { 'mt-0 hidden': !opened && isMobile },
   ]);
   const classesHamburger = clsx([
-    'flex md:hidden',
+    'flex lg:hidden',
     { 'absolute right-5 top-5 z-50': opened },
   ]);
   const navItems = navigationItems.map((item) => (
@@ -43,7 +44,7 @@ export default function HeaderNavigation() {
 
   return (
     <nav className="flex w-full flex-wrap justify-between self-center p-4 md:self-start">
-      <Link href="/" className="flex md:collapse md:hidden">
+      <Link href="/" className="flex lg:collapse lg:hidden">
         <Image src={logo} alt="main logo image" width={100} height={60} />
       </Link>
       <button className={classesHamburger} onClick={onClickHamburger}>

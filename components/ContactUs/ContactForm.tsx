@@ -1,11 +1,11 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { eventBus } from '@/app/utils/event-bus';
+import { eventBus } from '@/app/utils/eventBus';
 
 const initialState = { name: '', email: '', phone: '' };
 
-export default function Contact() {
+export default function ContactForm() {
   const [values, setValues] = useState(initialState);
   const [loading, setLoading] = useState(false);
 

@@ -12,7 +12,7 @@ export default function SlideBanner({
   subheading,
 }: SlideBannerProps) {
   return (
-    <div className="mx-auto !flex h-[300px] flex-col items-center justify-center text-white before:absolute before:h-full before:w-full before:bg-black-rgba before:bg-opacity-40 lg:h-[800px]">
+    <div className="!flex h-[300px] flex-col items-center justify-center text-white lg:h-[800px]">
       <Image
         src={url}
         alt="main banner slide"

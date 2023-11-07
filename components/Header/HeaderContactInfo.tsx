@@ -16,7 +16,7 @@ export default function HeaderContactInfo() {
   };
 
   return (
-    <address className="hidden w-full grow items-center justify-between not-italic md:flex ">
+    <address className="hidden w-full grow items-center justify-between not-italic lg:flex ">
       <ul className="flex md:flex-col lg:flex-row">
         <li className="flex items-center p-4 md:flex-1">
           <div className="mr-3 flex h-9 w-9 items-center justify-center rounded-full bg-gray-400 ring-2 ring-gray-500">
@@ -62,13 +62,13 @@ export default function HeaderContactInfo() {
           </div>
         </li>
       </ul>
-      {/* <button
+      <button
         type="button"
         className="transition-colors mr-4 w-1/6 bg-navy-800 p-4 text-white hover:bg-navy-100"
         onClick={onClickButton}
       >
         Zapytaj
-      </button> */}
+      </button>
     </address>
   );
 }

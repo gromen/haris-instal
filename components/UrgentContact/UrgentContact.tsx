@@ -1,8 +1,8 @@
 'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import Contact from '@/components/Contact/Contact';
-import { eventBus } from '@/app/utils/event-bus';
+import ContactForm from '@/components/ContactUs/ContactForm';
+import { eventBus } from '@/app/utils/eventBus';
 import { useEffect, useRef, useState } from 'react';
 import Alert, { AlertProps } from '@/components/Alert/Alert';
 
@@ -49,7 +49,7 @@ export default function UrgentContact() {
           <FontAwesomeIcon icon={faEnvelope} className=" text-3xl" />
         </div>
         <div className="p-6">
-          <Contact />
+          <ContactForm />
         </div>
       </div>
     </section>

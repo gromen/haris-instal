@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import useWindowSize from '@/app/hooks/useWindowSize';
-import { Fragment } from 'react';
 import SliderTrustedPartner from '@/components/Slider/SliderTrustedPartner';
 
 export default function TrustedPartner() {

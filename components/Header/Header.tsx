@@ -15,7 +15,7 @@ export default function Header() {
       <div className="container mx-auto">
         {/* <HeaderTop /> */}
         <div className="flex">
-          <div className="hidden basis-3/12 md:flex md:justify-start">
+          <div className="hidden basis-3/12 lg:flex lg:justify-start">
             <Logo />
           </div>
           <div className="divide-gray-50 flex grow flex-col divide-y">
