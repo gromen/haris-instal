@@ -10,6 +10,7 @@ type AccordionListItemProps = {
   onClick: (itemId: string) => void;
   itemId: string;
   accordionItemIndex: string | number;
+  classesLi?: string;
 };
 
 export default function AccordionListItem({
