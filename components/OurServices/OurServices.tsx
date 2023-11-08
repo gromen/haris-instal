@@ -5,7 +5,10 @@ import { motion } from 'framer-motion';
 
 export default function OurServices() {
   return (
-    <section className="container mx-auto bg-gray-400 p-4 lg:p-28">
+    <section
+      id="services"
+      className="container mx-auto bg-gray-400 p-4 lg:p-28"
+    >
       <Heading title="Sprawdź nasze usługi" subtitle="Nasze usługi" />
       <motion.div
         className=" gap-5 text-center lg:flex lg:justify-around"

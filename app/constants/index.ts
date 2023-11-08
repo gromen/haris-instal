@@ -25,7 +25,7 @@ export const services = [
 export const navigationItems = [
   { title: 'Home', href: '/', label: 'Home page', classes: 'md:pr-6' },
   { title: 'Usługi', href: '#services', label: 'Usługi', classes: '' },
-  { title: 'Dlaczego my', href: '#why-us', label: 'Dlaczego my', classes: '' },
+  // { title: 'Dlaczego my', href: '#why-us', label: 'Dlaczego my', classes: '' },
   { title: 'Kontakt', href: '#contact', label: 'Kontakt', classes: '' },
   {
     title: 'Gdzie jesteśmy',
@@ -33,6 +33,7 @@ export const navigationItems = [
     label: 'Gdzie jesteśmy',
     classes: '',
   },
+  { title: 'FAQ', href: '#faq', label: 'Faq', classes: '' },
 ] as const;
 
 export const slides = [

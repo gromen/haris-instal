@@ -11,35 +11,43 @@ import { navigationItems } from '@/app/constants/index';
 import Image from 'next/image';
 
 export default function HeaderNavigation() {
-  const [isMobile, width] = useWindowSize();
+  const [isMobile] = useWindowSize();
   const [opened, setOpened] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  const onClickLink = (title: string) => {
+    setActiveSection(title);
+    setOpened(false);
+  };
+
   const onClickHamburger = () => setOpened((prevState) => !prevState);
-  console.log({ isMobile, opened, width });
-  const classesUl = clsx([
+  const classesUl = clsx(
     'lg:gap-6 w-full max-[1023px]:h-screen text-center text-4xl lg:text-lg top-0 space-y-6 lg:space-y-0 font-bold lg:flex  lg:w-auto lg:text-left absolute lg:static lg:flex-row left-0',
     {
       'bg-white flex flex-col items-center justify-center bg-opacity-90':
         opened && isMobile,
     },
-    { 'mt-0 hidden': !opened && isMobile },
-  ]);
-  const classesHamburger = clsx([
-    'flex lg:hidden',
-    { 'absolute right-5 top-5 z-50': opened },
-  ]);
+    { 'mt-0 hidden': !opened && isMobile }
+  );
+  const classesHamburger = clsx('flex lg:hidden', {
+    'absolute right-5 top-5 z-50': opened,
+  });
   const navItems = navigationItems.map((item) => (
     <HeaderNavigationItem
       key={item.title}
       title={item.title}
       href={item.href}
       label={item.label}
-      setOpened={setOpened}
+      onClick={() => onClickLink(item.title)}
+      activeSection={activeSection}
     />
   ));
 
   useEffect(() => {
-    document.body.classList.toggle('overflow-hidden', opened);
-    document.body.classList.toggle('md:overflow-auto', opened);
+    const classList = document.body.classList;
+
+    classList.toggle('overflow-hidden', opened);
+    classList.toggle('md:overflow-auto', opened);
   }, [opened]);
 
   return (

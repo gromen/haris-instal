@@ -13,7 +13,12 @@ export default function Heading({ subtitle, title }: HeadingProps) {
         <FontAwesomeIcon className="pr-2" icon={faScrewdriverWrench} />
         {subtitle}
       </p>
-      <h3 className="mb-5 pb-4 text-3xl font-semibold">{title}</h3>
+      <h3
+        className="mb-5 scroll-mt-28 pb-4 text-3xl font-semibold "
+        id="services"
+      >
+        {title}
+      </h3>
     </>
   );
 }

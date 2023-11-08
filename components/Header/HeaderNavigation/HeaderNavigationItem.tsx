@@ -1,12 +1,15 @@
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useState } from 'react';
 
 type HeaderNavigationItemProps = {
   title: string;
   href: string;
   label: string;
   classes?: string;
-  setOpened: (param: boolean) => void;
+  activeSection: string;
+  onClick?: () => void;
 };
 
 export default function HeaderNavigationItem({
@@ -14,7 +17,8 @@ export default function HeaderNavigationItem({
   label,
   href,
   classes,
-  setOpened,
+  activeSection,
+  onClick,
 }: HeaderNavigationItemProps) {
   return (
     <motion.li
@@ -26,7 +30,12 @@ export default function HeaderNavigationItem({
         hidden: { opacity: 0, scale: 0 },
       }}
     >
-      <Link href={href} aria-label={label} onClick={() => setOpened(false)}>
+      <Link
+        href={href}
+        aria-label={label}
+        onClick={onClick}
+        className={clsx({ 'text-primary': title === activeSection })}
+      >
         {title}
       </Link>
     </motion.li>
