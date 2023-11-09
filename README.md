@@ -1,6 +1,6 @@
 # [WIP] Haris-instal.pl - Portfolio website for plumbing services
 
-This is a [Next.js](https://nextjs.org/) v13 project (`App router`) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) v13 project (`appDir`) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 #### Getting Started
 
