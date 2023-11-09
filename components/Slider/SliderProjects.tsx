@@ -8,9 +8,8 @@ import './slider.scss';
 import { settingsProjects } from '@/app/shared/SliderArrows/SliderSettings';
 import { useEffect, useState } from 'react';
 import getAllProjects, { Project } from '@/app/services/getAllProjects';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import { FaSpinner } from 'react-icons/fa6';
 
 export default function SliderProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -46,11 +45,7 @@ export default function SliderProjects() {
     <>
       {loading ? (
         <div className="flex justify-center">
-          <FontAwesomeIcon
-            size="3x"
-            icon={faSpinner}
-            className="animate-spin"
-          />
+          <FaSpinner className="animate-spin" />
         </div>
       ) : (
         <Slider {...settingsProjects} className="slider-main">

@@ -1,7 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { eventBus } from '@/app/utils/eventBus';
+import { FaSpinner } from 'react-icons/fa6';
 
 const initialState = { name: '', email: '', phone: '' };
 
@@ -91,9 +90,7 @@ export default function ContactForm() {
             className="transition-colors mt-8 flex w-full items-center gap-2 bg-primary p-4 text-white hover:bg-navy-100 sm:w-auto"
             disabled={disabled}
           >
-            {loading && (
-              <FontAwesomeIcon icon={faSpinner} className="animate-spin" />
-            )}
+            {loading && <FaSpinner className="animate-spin" />}
             {!loading ? 'Wyślij' : 'Wysyłanie'}
           </button>
         </div>

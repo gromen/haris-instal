@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
+import { FaScrewdriverWrench } from 'react-icons/fa6';
 
 type HeadingProps = {
   title: string;
@@ -10,7 +9,7 @@ export default function Heading({ subtitle, title }: HeadingProps) {
   return (
     <>
       <p className="mt-5 pb-2 text-sm font-semibold text-primary">
-        <FontAwesomeIcon className="pr-2" icon={faScrewdriverWrench} />
+        <FaScrewdriverWrench className="pr-2" />
         {subtitle}
       </p>
       <h3

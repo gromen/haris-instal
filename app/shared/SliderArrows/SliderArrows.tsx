@@ -1,10 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faArrowLeft,
-  faArrowRight,
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
+  FaArrowLeft,
+  FaArrowRight,
+  FaChevronLeft,
+  FaChevronRight,
+} from 'react-icons/fa6';
 
 export type ArrowProps = {
   onClick?: () => void;
@@ -17,11 +16,7 @@ export function NextArrow({ onClick }: ArrowProps) {
       type="button"
       onClick={onClick}
     >
-      <FontAwesomeIcon
-        icon={faChevronRight}
-        className="text-primary hover:text-navy-800"
-        size="lg"
-      />
+      <FaChevronRight className="text-primary hover:text-navy-800" />
     </button>
   );
 }
@@ -33,11 +28,7 @@ export function PrevArrow({ onClick }: ArrowProps) {
       type="button"
       onClick={onClick}
     >
-      <FontAwesomeIcon
-        icon={faChevronLeft}
-        className="text-primary hover:text-navy-800"
-        size="lg"
-      />
+      <FaChevronLeft className="text-primary hover:text-navy-800" />
     </button>
   );
 }
@@ -49,11 +40,7 @@ export function NextArrowProjects({ onClick }: ArrowProps) {
       type="button"
       onClick={onClick}
     >
-      <FontAwesomeIcon
-        icon={faArrowRight}
-        className="text-primary hover:text-navy-800"
-        size="lg"
-      />
+      <FaArrowRight className="text-primary hover:text-navy-800" />
     </button>
   );
 }
@@ -65,11 +52,7 @@ export function PrevArrowProjects({ onClick }: ArrowProps) {
       type="button"
       onClick={onClick}
     >
-      <FontAwesomeIcon
-        icon={faArrowLeft}
-        className="text-primary hover:text-navy-800"
-        size="lg"
-      />
+      <FaArrowLeft className="text-primary hover:text-navy-800" />
     </button>
   );
 }

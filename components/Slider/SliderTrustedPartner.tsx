@@ -6,14 +6,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './slider.scss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { slides } from '@/app/constants';
 import Image from 'next/image';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
 type ArrowProps = {
   onClick?: () => void;
@@ -58,11 +54,7 @@ export default function SliderTrustedPartner() {
         onClick={onClick}
         disabled={isDisabled()}
       >
-        <FontAwesomeIcon
-          icon={faChevronRight}
-          className="text-primary hover:text-navy-800"
-          size="lg"
-        />
+        <FaChevronRight className="text-primary hover:text-navy-800" />
       </button>
     );
   }
@@ -75,11 +67,7 @@ export default function SliderTrustedPartner() {
         onClick={onClick}
         disabled={isDisabled('prev')}
       >
-        <FontAwesomeIcon
-          icon={faChevronLeft}
-          className="text-primary hover:text-navy-800"
-          size="lg"
-        />
+        <FaChevronLeft className="text-primary hover:text-navy-800" />
       </button>
     );
   }

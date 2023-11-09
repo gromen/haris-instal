@@ -1,11 +1,6 @@
 'use client';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faComments,
-  faLocationDot,
-  faPhone,
-} from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { FaComments, FaLocationDot, FaPhone } from 'react-icons/fa6';
 
 export default function HeaderContactInfo() {
   const onClickButton = () => {
@@ -20,11 +15,7 @@ export default function HeaderContactInfo() {
       <ul className="flex md:flex-col lg:flex-row">
         <li className="flex items-center p-4 md:flex-1">
           <div className="mr-3 flex h-9 w-9 items-center justify-center rounded-full bg-gray-400 ring-2 ring-gray-500">
-            <FontAwesomeIcon
-              icon={faPhone}
-              className="text-primary"
-              size="lg"
-            />
+            <FaPhone className="text-primary" size="lg" />
           </div>
           <div className="flex flex-col">
             <div className="text-gray-700">Zadzwoń do nas:</div>
@@ -35,11 +26,7 @@ export default function HeaderContactInfo() {
         </li>
         <li className="flex items-center p-4 md:flex-1">
           <div className="mr-4 flex h-9 w-9 items-center justify-center rounded-full bg-gray-400 ring-2 ring-gray-500">
-            <FontAwesomeIcon
-              icon={faComments}
-              className="text-primary"
-              size="lg"
-            />
+            <FaComments className="text-primary" />
           </div>
           <div className="flex flex-col">
             <div className="text-gray-700">Napisz do nas:</div>
@@ -50,11 +37,7 @@ export default function HeaderContactInfo() {
         </li>
         <li className="flex items-center p-4">
           <div className="mr-4 flex h-9 w-9 items-center justify-center rounded-full bg-gray-400 ring-2 ring-gray-500">
-            <FontAwesomeIcon
-              icon={faLocationDot}
-              className="text-primary"
-              size="lg"
-            />
+            <FaLocationDot className="text-primary" size="lg" />
           </div>
           <div className="flex flex-col">
             <div className="text-gray-700">Lokalizacja:</div>

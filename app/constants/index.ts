@@ -1,24 +1,20 @@
-import {
-  faBath,
-  faScrewdriverWrench,
-  faWrench,
-} from '@fortawesome/free-solid-svg-icons';
+import { FaBath, FaScrewdriverWrench, FaWrench } from 'react-icons/fa6';
 
 export const services = [
   {
     title: 'Basement plumbing',
     body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
-    icon: faBath,
+    icon: FaBath,
   },
   {
     title: 'Drain plumbing',
     body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
-    icon: faScrewdriverWrench,
+    icon: FaScrewdriverWrench,
   },
   {
     title: 'Water Line repair',
     body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
-    icon: faWrench,
+    icon: FaWrench,
   },
 ];
 

@@ -1,7 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { clsx } from 'clsx';
 import { motion } from 'framer-motion';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa6';
 
 type AccordionListItemProps = {
   title: string;
@@ -35,15 +34,9 @@ export default function AccordionListItem({
     tabIndex: isOpen ? 0 : undefined,
   };
   const arrowIcon = isOpen ? (
-    <FontAwesomeIcon
-      icon={faChevronUp}
-      className="absolute right-2 top-1/3 text-primary"
-    />
+    <FaChevronUp className="absolute right-2 top-1/3 text-primary" />
   ) : (
-    <FontAwesomeIcon
-      icon={faChevronDown}
-      className="absolute right-2 top-1/3 text-primary"
-    />
+    <FaChevronDown className="absolute right-2 top-1/3 text-primary" />
   );
 
   return (

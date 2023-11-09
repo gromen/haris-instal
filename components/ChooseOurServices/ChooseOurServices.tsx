@@ -1,7 +1,6 @@
-import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import image from '@/public/images/image1.jpg';
 import Image from 'next/image';
+import { FaScrewdriverWrench } from 'react-icons/fa6';
 
 export default function ChooseOurServices() {
   return (
@@ -9,7 +8,7 @@ export default function ChooseOurServices() {
       <div className="lg:flex lg:gap-5">
         <div className="lg:w-1/3">
           <p className="pb-2 text-sm font-semibold text-primary">
-            <FontAwesomeIcon className="pr-2" icon={faScrewdriverWrench} />
+            <FaScrewdriverWrench className="pr-2" />
             Dlaczego warto wybrać nasze usługi
           </p>
           <h3 className="pb-4 text-3xl font-semibold">
@@ -17,18 +16,12 @@ export default function ChooseOurServices() {
           </h3>
           <div className="flex flex-col gap-5 md:flex-row">
             <article className="bg-gray-400 p-4 text-center">
-              <FontAwesomeIcon
-                className="pb-4 text-3xl text-primary"
-                icon={faScrewdriverWrench}
-              />
+              <FaScrewdriverWrench className="pb-4 text-3xl text-primary" />
               <h4 className="pb-4 font-semibold">Przystępna cena</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
             <article className="bg-gray-400 p-4 text-center">
-              <FontAwesomeIcon
-                className="pb-4 text-3xl text-primary"
-                icon={faScrewdriverWrench}
-              />
+              <FaScrewdriverWrench className="pb-4 text-3xl text-primary" />
               <h4 className="pb-4 font-semibold">Fachowy hydraulik</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>

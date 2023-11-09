@@ -1,10 +1,9 @@
 'use client';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import ContactForm from '@/components/ContactUs/ContactForm';
 import { eventBus } from '@/app/utils/eventBus';
 import { useEffect, useRef, useState } from 'react';
 import Alert, { AlertProps } from '@/components/Alert/Alert';
+import { FaEnvelope } from 'react-icons/fa6';
 
 interface AlertComponent {
   scrollToView: () => void;
@@ -46,7 +45,7 @@ export default function UrgentContact() {
       )}
       <div className="bg-secondary text-white md:flex">
         <div className="flex items-center bg-primary p-6">
-          <FontAwesomeIcon icon={faEnvelope} className=" text-3xl" />
+          <FaEnvelope className=" text-3xl" />
         </div>
         <div className="p-6">
           <ContactForm />

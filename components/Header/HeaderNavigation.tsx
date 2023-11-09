@@ -4,11 +4,10 @@ import logo from '@/public/images/haris-instal_logo.png';
 import HeaderNavigationItem from '@/components/Header/HeaderNavigation/HeaderNavigationItem';
 import { useEffect, useState } from 'react';
 import { clsx } from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import useWindowSize from '@/app/hooks/useWindowSize';
 import { navigationItems } from '@/app/constants/index';
 import Image from 'next/image';
+import { FaBars, FaXmark } from 'react-icons/fa6';
 
 export default function HeaderNavigation() {
   const [isMobile] = useWindowSize();
@@ -56,10 +55,11 @@ export default function HeaderNavigation() {
         <Image src={logo} alt="main logo image" width={100} height={60} />
       </Link>
       <button className={classesHamburger} onClick={onClickHamburger}>
-        <FontAwesomeIcon
-          icon={!opened ? faBars : faXmark}
-          className="text-4xl"
-        />
+        {!opened ? (
+          <FaBars className="text-4xl" />
+        ) : (
+          <FaXmark className="text-4xl" />
+        )}
       </button>
       <div className="w-full"></div>
       <ul className={classesUl}>{navItems}</ul>
