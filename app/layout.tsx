@@ -10,6 +10,11 @@ const openSans = Open_Sans({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Home | Haris-instal',
   description: 'Usługi hydrauliczne',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

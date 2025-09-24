@@ -2,6 +2,7 @@ import Service from '@/components/OurServices/Service';
 import { services } from '@/app/constants';
 import Heading from '@/components/Heading/Heading';
 import { motion } from 'framer-motion';
+import { FaScrewdriverWrench } from 'react-icons/fa6';
 
 export default function OurServices() {
   return (
@@ -9,7 +10,12 @@ export default function OurServices() {
       id="services"
       className="container mx-auto bg-gray-400 p-4 lg:p-28"
     >
-      <Heading title="Sprawdź nasze usługi" subtitle="Nasze usługi" />
+      <Heading
+        title="Sprawdź nasze usługi"
+        subtitle="Nasze usługi"
+        icon={FaScrewdriverWrench}
+        titleId="services"
+      />
       <motion.div
         className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3"
         initial={{ opacity: 0, y: 100 }}

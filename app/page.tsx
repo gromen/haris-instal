@@ -15,11 +15,11 @@ export default function Home() {
     <>
       <Analytics />
       <HeroBanner />
-      <TrustedPartner />
+      {/* <TrustedPartner /> */}
       <OurServices />
       <ChooseOurServices />
-      <TotalStatistics />
-      <ContactUs />
+      {/* <TotalStatistics /> */}
+      {/* <ContactUs /> */}
       <WhereAreWe />
       <Faq />
     </>
