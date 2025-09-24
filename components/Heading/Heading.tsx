@@ -1,15 +1,12 @@
 import { FaScrewdriverWrench } from 'react-icons/fa6';
 
-type HeadingProps = {
-  title: string;
-  subtitle: string;
-};
+type HeadingProps = { title: string; subtitle: string };
 
 export default function Heading({ subtitle, title }: HeadingProps) {
   return (
     <>
       <p className="mt-5 pb-2 text-sm font-semibold text-primary">
-        <FaScrewdriverWrench className="pr-2" />
+        <FaScrewdriverWrench className="pr-2" size={30} />
         {subtitle}
       </p>
       <h3

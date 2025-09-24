@@ -1,20 +1,44 @@
-import { FaBath, FaScrewdriverWrench, FaWrench } from 'react-icons/fa6';
+import {
+  FaBath,
+  FaScrewdriverWrench,
+  FaWrench,
+  FaBuilding,
+  FaHammer,
+  FaPaintRoller,
+  FaScrewdriver,
+  FaFlask,
+} from 'react-icons/fa6';
 
 export const services = [
   {
-    title: 'Basement plumbing',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
+    title: 'Instalacje wodno-kanalizacyjne, cieplne i klimatyzacyjne',
+    body: 'Profesjonalne wykonywanie instalacji wodno-kanalizacyjnych, cieplnych i klimatyzacyjnych. Zapewniamy kompleksowe rozwiązania dla domów i budynków komercyjnych.',
     icon: FaBath,
   },
   {
-    title: 'Drain plumbing',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
-    icon: FaScrewdriverWrench,
+    title: 'Roboty budowlane - budynki mieszkalne i niemieszkalne',
+    body: 'Wykonujemy roboty budowlane związane ze wznoszeniem budynków mieszkalnych i niemieszkalnych. Doświadczony zespół zapewnia wysoką jakość wykonania.',
+    icon: FaBuilding,
   },
   {
-    title: 'Water Line repair',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut illo ipsum magnam maiores, pariatur repellendus ullam. Accusamus blanditiis dolor fugiat illo iusto laboriosam nam provident quas quisquam, sapiente suscipit voluptatum.',
-    icon: FaWrench,
+    title: 'Przygotowanie terenu pod budowę',
+    body: 'Kompleksowe przygotowanie terenu pod budowę, w tym roboty ziemne, niwelacja i przygotowanie fundamentów zgodnie z projektem.',
+    icon: FaHammer,
+  },
+  {
+    title: 'Tynkowanie i wykończenia',
+    body: 'Profesjonalne tynkowanie, zakładanie stolarki budowlanej, posadzkarstwo, tapetowanie i oblicowywanie ścian oraz malowanie i szklenie.',
+    icon: FaPaintRoller,
+  },
+  {
+    title: 'Pozostałe roboty budowlane wykończeniowe',
+    body: 'Wykonywanie pozostałych robót budowlanych wykończeniowych oraz specjalistycznych robót budowlanych. Kompleksowe wykończenie wnętrz.',
+    icon: FaScrewdriver,
+  },
+  {
+    title: 'Badania naukowe i prace rozwojowe',
+    body: 'Prowadzimy badania naukowe i prace rozwojowe w dziedzinie nauk przyrodniczych i technicznych związanych z budownictwem i instalacjami.',
+    icon: FaFlask,
   },
 ];
 

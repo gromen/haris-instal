@@ -4,17 +4,15 @@ import { getProjectBySlug } from '@/app/constants/graphqlQueries';
 import getAllProjects from '@/app/services/getAllProjects';
 import Image from 'next/image';
 
-type Props = {
-  params: { slug: string };
-};
+type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.slug;
+  const { slug } = await params;
   const result = await fetchGraphql(getProjectBySlug, { slug });
-  const project = result.data.projectBy;
+  const project = result?.data?.projectBy;
 
   return {
-    title: `${project?.title} | Haris Instal`,
+    title: `${project?.title || 'Project'} | Haris Instal`,
     description: ' ',
   };
 }
@@ -22,14 +20,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export async function generateStaticParams() {
   const result = await getAllProjects();
 
-  return result.map((project) => ({
-    slug: project.slug,
-  }));
+  return result.map((project) => ({ slug: project.slug }));
 }
 
-export default async function Page({ params: { slug } }: Props) {
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
   const result = await fetchGraphql(getProjectBySlug, { slug });
-  const project = result.data.projectBy;
+  const project = result?.data?.projectBy;
+
+  if (!project) {
+    return (
+      <div className="mt-lg-20 container mx-auto mt-10 px-4">
+        <h1 className="mb-lg-10 mb-5 w-full text-4xl font-bold">
+          Project not found
+        </h1>
+        <p>The requested project could not be found.</p>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -52,9 +60,7 @@ export default async function Page({ params: { slug } }: Props) {
           </div>
           <div className="lg:w-2/3">
             <div
-              dangerouslySetInnerHTML={{
-                __html: String(project?.content),
-              }}
+              dangerouslySetInnerHTML={{ __html: String(project?.content) }}
             />
           </div>
         </div>

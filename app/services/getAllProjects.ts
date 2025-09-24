@@ -12,25 +12,25 @@ export type Project = {
     projectImage: {
       altText: string;
       mediaItemUrl: string;
-      mediaDetails: {
-        height: number;
-        width: number;
-      };
+      mediaDetails: { height: number; width: number };
     };
   };
   featuredImage: {
     node: {
       altText: string;
       sourceUrl: string;
-      mediaDetails: {
-        height: number;
-        width: number;
-      };
+      mediaDetails: { height: number; width: number };
     };
   };
 };
 
 export default async function getAllProjects(): Promise<Project[]> {
-  const { data } = await fetchGraphql(queryAllProjects);
-  return data?.projects?.nodes;
+  const result = await fetchGraphql(queryAllProjects);
+
+  if (!result || !result.data) {
+    console.error('Failed to fetch projects:', result?.errors);
+    return [];
+  }
+
+  return result.data?.projects?.nodes || [];
 }

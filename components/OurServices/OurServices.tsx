@@ -11,7 +11,7 @@ export default function OurServices() {
     >
       <Heading title="Sprawdź nasze usługi" subtitle="Nasze usługi" />
       <motion.div
-        className=" gap-5 text-center lg:flex lg:justify-around"
+        className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
