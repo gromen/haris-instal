@@ -47,6 +47,7 @@ export default function ChooseOurServices() {
             alt="bg"
             width={640}
             height={400}
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
       </div>

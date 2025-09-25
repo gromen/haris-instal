@@ -58,7 +58,7 @@ export default function RootLayout({
         ])}
       >
         <Header />
-        <main className="pb-40 pt-20 lg:pt-[140px]">{children}</main>
+        <main className="pb-10 pt-20 lg:pt-[140px]">{children}</main>
         <Footer />
       </body>
     </html>

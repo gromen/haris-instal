@@ -52,7 +52,13 @@ export default function HeaderNavigation() {
   return (
     <nav className="flex w-full flex-wrap justify-between self-center p-4 md:self-start">
       <Link href="/" className="flex lg:collapse lg:hidden">
-        <Image src={logo} alt="main logo image" width={100} height={60} />
+        <Image
+          src={logo}
+          alt="main logo image"
+          width={100}
+          height={60}
+          style={{ width: 'auto', height: 'auto' }}
+        />
       </Link>
       <button className={classesHamburger} onClick={onClickHamburger}>
         {!opened ? (

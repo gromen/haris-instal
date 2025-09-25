@@ -10,6 +10,7 @@ export default function Logo() {
         alt="haris instal logo obrazek"
         width={300}
         height={60}
+        style={{ width: 'auto', height: 'auto' }}
       />
     </Link>
   );
