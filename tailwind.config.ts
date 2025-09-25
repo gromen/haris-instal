@@ -44,6 +44,9 @@ const config: Config = {
       'black-rgba': 'rgba(0, 0, 0, 0.5)',
     },
     extend: {
+      fontFamily: {
+        vremena: ['var(--font-vremena-grotesk)', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

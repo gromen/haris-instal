@@ -6,26 +6,6 @@ export const queryAllProjects = `
         id
         slug
         title
-        ProductPageFields {
-          projectImage {
-            altText
-            mediaItemUrl
-            mediaDetails {
-              height
-              width
-            }
-          }
-        }
-        featuredImage {
-          node {
-            altText
-            sourceUrl
-            mediaDetails {
-              height
-              width
-            }
-          }
-        }
       }
     }
   }

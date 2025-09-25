@@ -9,11 +9,14 @@ import ContactUs from '@/components/ContactUs/ContactUs';
 import WhereAreWe from '@/components/WhereAreWe';
 import Faq from '@/components/Faq/Faq';
 import Analytics from '@/components/Analytics/Analytics';
+import Projects from '@/components/Projects/Projects';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
 
 export default function Home() {
   return (
     <>
       <Analytics />
+      <VercelAnalytics />
       <HeroBanner />
       {/* <TrustedPartner /> */}
       <OurServices />
@@ -22,6 +25,7 @@ export default function Home() {
       {/* <ContactUs /> */}
       <WhereAreWe />
       <Faq />
+      <Projects />
     </>
   );
 }
