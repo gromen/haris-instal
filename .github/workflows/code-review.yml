@@ -2,7 +2,7 @@ name: Code Review for PRs
 
 on:
   pull_request:
-    branches: [master]
+    branches: [main]
     types: [labeled]
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
 
       - name: Run Claude Code Review
         run: |
-          PR_DIFF=$(git diff origin/master...HEAD)
+          PR_DIFF=$(git diff origin/main...HEAD)
           CLAUDE_CR_PROMPT=$(cat .ai/prompts/code-review.md)
           claude --append-system-prompt "$CLAUDE_CR_PROMPT" \
             --print "Przeprowadź Code Review:\n\n $PR_DIFF" \
