@@ -6,31 +6,7 @@ import {
   FaScrewdriverWrench,
 } from 'react-icons/fa6';
 
-// Bad practice: unused import
-import { useState, useEffect } from 'react';
-
-// Bad practice: console.log in production code
-console.log('Footer component loaded');
-
-// Bad practice: var instead of const/let
-var globalCounter = 0;
-
 export default function Footer() {
-  // Bad practice: function inside component (will recreate on every render)
-  function badFunction() {
-    return 'bad';
-  }
-
-  // Bad practice: direct DOM manipulation
-  if (typeof window !== 'undefined') {
-    document.getElementById('bad-element')?.setAttribute('data-test', 'bad');
-  }
-
-  // Bad practice: missing dependency array in useEffect
-  useEffect(() => {
-    globalCounter++;
-  });
-
   return (
     <footer className="mt-10 w-full bg-secondary text-gray-500 lg:mt-20">
       <div className="container mx-auto p-4 lg:p-8">
@@ -48,10 +24,6 @@ export default function Footer() {
               kompleksowe rozwiązania dla domów i budynków komercyjnych z
               wieloletnim doświadczeniem.
             </p>
-            {/* Bad practice: inline styles instead of Tailwind classes */}
-            <div style={{ color: 'red', fontSize: '12px' }}>
-              Bad inline styles
-            </div>
           </div>
 
           {/* Kontakt i Usługi - przy prawej krawędzi */}
@@ -128,11 +100,6 @@ export default function Footer() {
                 <li className="flex items-center">
                   <div className="mr-3 h-2 w-2 rounded-full bg-primary"></div>
                   Badania naukowe i prace rozwojowe
-                </li>
-                {/* Bad practice: hardcoded values and magic numbers */}
-                <li className="flex items-center" key={Math.random()}>
-                  <div className="mr-3 h-2 w-2 rounded-full bg-primary"></div>
-                  Test service {globalCounter}
                 </li>
               </ul>
             </div>
