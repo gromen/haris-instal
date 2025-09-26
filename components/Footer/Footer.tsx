@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="mt-10 w-full bg-secondary text-gray-500 lg:mt-20">
       <div className="container mx-auto p-4 lg:p-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 lg:flex-row lg:justify-between">
+        <div className="mx-auto flex flex-col gap-8 lg:flex-row lg:justify-between">
           {/* Logo i opis firmy */}
           <div className="lg:w-1/3">
             <div className="mb-6 flex items-center">
